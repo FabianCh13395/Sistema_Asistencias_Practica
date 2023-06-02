@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="datos\CONEXIONMAESTRA.cs" />
+    <Compile Include="datos\Dpersonal.cs" />
+    <Compile Include="logica\LPersonal.cs" />
     <Compile Include="presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,10 +92,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="datos\" />
-    <Folder Include="logica\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\reloj.png" />
   </ItemGroup>
