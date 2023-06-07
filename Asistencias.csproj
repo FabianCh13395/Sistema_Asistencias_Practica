@@ -49,6 +49,7 @@
     <Compile Include="datos\CONEXIONMAESTRA.cs" />
     <Compile Include="datos\Dcargos.cs" />
     <Compile Include="datos\Dpersonal.cs" />
+    <Compile Include="logica\Bases.cs" />
     <Compile Include="logica\Lcargo.cs" />
     <Compile Include="logica\LPersonal.cs" />
     <Compile Include="presentacion\MenuPrincipal.cs">
