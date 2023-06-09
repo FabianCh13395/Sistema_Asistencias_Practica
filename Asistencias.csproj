@@ -95,7 +95,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reloj.png" />
   </ItemGroup>
@@ -131,6 +133,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_comprobado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

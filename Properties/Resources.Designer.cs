@@ -93,6 +93,16 @@ namespace Asistencias.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_comprobado {
+            get {
+                object obj = ResourceManager.GetObject("check_comprobado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clave {
             get {
                 object obj = ResourceManager.GetObject("clave", resourceCulture);
@@ -116,6 +126,16 @@ namespace Asistencias.Properties {
         internal static System.Drawing.Bitmap copia_de_respaldo {
             get {
                 object obj = ResourceManager.GetObject("copia-de-respaldo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar {
+            get {
+                object obj = ResourceManager.GetObject("editar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,9 +18,10 @@ namespace Asistencias.presentacion
         {
             InitializeComponent();
         }
-
+        int idCargo ;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            LocalizarDtvCargos();
             pnCargos.Visible = false;
             pnPaginado.Visible = false;
             pnRegistros.Visible = true;
@@ -28,6 +29,14 @@ namespace Asistencias.presentacion
             btnGuardarPersonal.Visible = true;
             btnGuardarCambiosPersonal.Visible = false;
             limpiar();
+        }
+        private void LocalizarDtvCargos()
+        {
+            dtListadoCargos.Location=new Point(txtCargo.Location.X,txtCargo.Location.Y+25);
+            dtListadoCargos.Size = new Size(460, 140);
+            dtListadoCargos.Visible = true;
+            lblTextoSueldo.Visible = false;
+            pnBtnGuardarPersonal.Visible=false;
         }
         private void limpiar()
         {
@@ -82,10 +91,12 @@ namespace Asistencias.presentacion
         {
             DataTable dt = new DataTable();
             Dcargos funcion = new Dcargos();
-            Console.WriteLine(txtCargo.Text+"Estamos aqui");
             funcion.BuscarCargos(ref dt, txtCargo.Text);
             dtListadoCargos.DataSource = dt;
             Bases.DisenioDt(ref dtListadoCargos);
+            dtListadoCargos.Columns[1].Visible = false;
+            dtListadoCargos.Columns[3].Visible = false;
+            dtListadoCargos.Visible = true;
         }
 
         private void txtCargo_TextChanged(object sender, EventArgs e)
@@ -118,6 +129,70 @@ namespace Asistencias.presentacion
         {
             Bases.Decimales(txtSueldo, e);
 
+        }
+
+        private void dtListadoCargos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dtListadoCargos.Columns["EditarC"].Index)
+            {
+                ObtenerCargosEditar();
+            }
+            if (e.ColumnIndex == dtListadoCargos.Columns["cargo"].Index)
+            {
+                ObtenerDatosCargo();
+            }
+        }
+        private void ObtenerDatosCargo()
+        {
+            idCargo = Convert.ToInt32(dtListadoCargos.SelectedCells[1].Value);
+            txtCargo.Text = dtListadoCargos.SelectedCells[2].Value.ToString();
+            txtSueldo.Text = dtListadoCargos.SelectedCells[3].Value.ToString();
+            dtListadoCargos.Visible = false;
+            pnBtnGuardarPersonal.Visible = true;
+            lblTextoSueldo.Visible = true;
+        }
+        private void ObtenerCargosEditar()
+        {
+            idCargo = Convert.ToInt32(dtListadoCargos.SelectedCells[1].Value);
+            txtCargoI.Text = dtListadoCargos.SelectedCells[2].Value.ToString();
+            txtSueldoI.Text=dtListadoCargos.SelectedCells[3].Value.ToString();
+            btnGuardarCargo.Visible = false;
+            btnGuardarEditadoC.Visible = true;
+            btnCancelarCargo.Visible = true;
+            txtCargoI.Focus();
+            txtCargoI.SelectAll();
+            pnCargos.Visible = true;
+            pnCargos.Dock=DockStyle.Fill;
+            pnCargos.BringToFront();
+        }
+
+        private void btnCancelarCargo_Click(object sender, EventArgs e)
+        {
+            pnCargos.Visible=false;
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            pnRegistros.Visible=false;
+        }
+
+        private void btnGuardarEditadoC_Click(object sender, EventArgs e)
+        {
+            EditarCargos();
+        }
+        private void EditarCargos()
+        {
+            Lcargo parametros = new Lcargo();
+            Dcargos funcion = new Dcargos();
+            parametros.id_cargo = idCargo;
+            parametros.Cargo = txtCargoI.Text;
+            parametros.sueldoPorHora = Convert.ToDouble(txtSueldoI.Text);
+            if (funcion.EditarCargo(parametros) == true)
+            {
+                txtCargo.Clear();
+                buscarCargos();
+                pnCargos.Visible = false;
+            }
         }
     }
 }
