@@ -18,7 +18,14 @@ namespace Asistencias.presentacion
         {
             InitializeComponent();
         }
-        int idCargo ;
+        int idCargo=0 ;
+        int desde = 1;
+        int hasta = 10;
+        int contador;
+        int idPersonal;
+        private int items_por_pagina = 10;
+        string estado;
+        int totalPaginas;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             LocalizarDtvCargos();
@@ -49,14 +56,52 @@ namespace Asistencias.presentacion
 
         private void btnGuardarPersonal_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtNombres.Text))
+            {
+                if (!string.IsNullOrEmpty(txtCedula.Text))
+                {
+                    if (!string.IsNullOrEmpty(cbPaises.Text))
+                    {
+                        if (idCargo > 0)
+                        {
+                            if (!string.IsNullOrEmpty(txtSueldo.Text))
+                            {
+                                InsertarPersonal();
+                            }
+                        }
+                    }
+                }
+            }
         }
         private void InsertarPersonal()
         {
             LPersonal parametros = new LPersonal();
+            Dpersonal dpersonal = new Dpersonal();
             parametros.nombres= txtNombres.Text;
             parametros.cedula = txtCedula.Text;
             parametros.pais = cbPaises.Text;
+            parametros.id_cargo = idCargo;
+            parametros.sueldo_hora = Convert.ToDouble( txtSueldo.Text);
+            if (dpersonal.InsertarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+                pnRegistros.Visible= false;
+            }
+        }
+        private void MostrarPersonal()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.MostrarPersonal(ref dt, desde, hasta);
+            dtListadoPersonal.DataSource= dt;
+            DiseniarDtvPersonal();
+        }
+        private void DiseniarDtvPersonal()
+        {
+            Bases.DisenioDt(ref dtListadoPersonal);
+            pnPaginado.Visible= true;
+            dtListadoPersonal.Columns[2].Visible=false;
+            dtListadoPersonal.Columns[7].Visible = false;
         }
         private void InsertarCargos()
         {
@@ -193,6 +238,71 @@ namespace Asistencias.presentacion
                 buscarCargos();
                 pnCargos.Visible = false;
             }
+        }
+
+        private void Personal_Load(object sender, EventArgs e)
+        {
+            MostrarPersonal();
+        }
+
+        private void dtListadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dtListadoPersonal.Columns["Eliminar"].Index)
+            {
+                DialogResult result = MessageBox.Show("Esta seguro que desea cambiar de estado a eliminado el siguiente registro?", "ELIMINAR REGISTRO", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    EliminarPersonal();
+                }
+                
+            }
+            if (e.ColumnIndex == dtListadoPersonal.Columns["Editar"].Index)
+            {
+                ObtenerDatos();
+            }
+        }
+        private void EliminarPersonal()
+        {
+            idPersonal = Convert.ToInt32(dtListadoPersonal.SelectedCells[2].Value);
+            LPersonal parametro=new LPersonal();
+            Dpersonal funcion=new Dpersonal();
+            parametro.id_personal = idPersonal;
+            if (funcion.EliminarPersonal(parametro) == true)
+            {
+                MostrarPersonal();
+            }
+        }
+        private void ObtenerDatos()
+        {
+            idPersonal = Convert.ToInt32(dtListadoPersonal.SelectedCells[2].Value);
+            estado = dtListadoPersonal.SelectedCells[8].Value.ToString();
+            if (estado == "Eliminado")
+            {
+                RestaurarPersonal();
+            }
+            else
+            {
+                txtNombres.Text = dtListadoPersonal.SelectedCells[3].Value.ToString();
+                txtCedula.Text=dtListadoPersonal.SelectedCells[4].Value.ToString();
+                cbPaises.Text = dtListadoPersonal.SelectedCells[10].Value.ToString();
+                txtCargo.Text=dtListadoPersonal.SelectedCells[6].Value.ToString();
+                idCargo= Convert.ToInt32(dtListadoPersonal.SelectedCells[7].Value);
+                txtSueldo.Text=dtListadoPersonal.SelectedCells[5].Value.ToString();
+                pnPaginado.Visible = false;
+                pnCargos.Visible = false;
+                pnRegistros.Visible = true;
+                pnRegistros.Dock=DockStyle.Fill;
+                dtListadoCargos.Visible = false;
+                lblTextoSueldo.Visible = false;
+                pnBtnGuardarPersonal.Visible = true;
+                btnGuardarCambiosPersonal.Visible = true;
+                btnGuardarPersonal.Visible=false;
+
+            }
+        }
+        private void RestaurarPersonal()
+        {
+
         }
     }
 }
