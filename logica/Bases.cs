@@ -54,5 +54,20 @@ namespace Asistencias.logica
             }
             return null;
         }
+        public static void DisenioDtvEliminar(ref DataGridView modificado) 
+        {
+            
+            foreach (DataGridViewRow data in modificado.Rows)
+            {
+                string estado;
+                estado = data.Cells["estado"].Value.ToString();
+                if (estado == "ELIMINADO")
+                {
+                    data.DefaultCellStyle.Font = new Font("Segoe UI",12,FontStyle.Strikeout|FontStyle.Bold);
+                    data.DefaultCellStyle.ForeColor = Color.FromArgb(146, 43, 33);
+                }
+            }
+            
+        }
     }
 }

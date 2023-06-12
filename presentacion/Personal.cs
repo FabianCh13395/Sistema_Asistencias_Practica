@@ -99,6 +99,7 @@ namespace Asistencias.presentacion
         private void DiseniarDtvPersonal()
         {
             Bases.DisenioDt(ref dtListadoPersonal);
+            Bases.DisenioDtvEliminar(ref dtListadoPersonal);
             pnPaginado.Visible= true;
             dtListadoPersonal.Columns[2].Visible=false;
             dtListadoPersonal.Columns[7].Visible = false;
@@ -276,12 +277,13 @@ namespace Asistencias.presentacion
         {
             idPersonal = Convert.ToInt32(dtListadoPersonal.SelectedCells[2].Value);
             estado = dtListadoPersonal.SelectedCells[8].Value.ToString();
-            if (estado == "Eliminado")
+            if (estado == "ELIMINADO")
             {
                 RestaurarPersonal();
             }
             else
             {
+                LocalizarDtvCargos();
                 txtNombres.Text = dtListadoPersonal.SelectedCells[3].Value.ToString();
                 txtCedula.Text=dtListadoPersonal.SelectedCells[4].Value.ToString();
                 cbPaises.Text = dtListadoPersonal.SelectedCells[10].Value.ToString();
@@ -302,7 +304,48 @@ namespace Asistencias.presentacion
         }
         private void RestaurarPersonal()
         {
+            DialogResult result = MessageBox.Show("Esta persona se Elimino. Desea volver a habilitarlo?", "HABILITAR PERSONAL", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.OK)
+            {
+                HabilitarPersonal();
+            }
+        }
+        private void HabilitarPersonal()
+        {
+            LPersonal personal = new LPersonal();
+            Dpersonal funcion=new Dpersonal();
+            personal.id_personal = idPersonal;
+            if (funcion.RestaurarPersonal(personal) == true)
+            {
+                MostrarPersonal();
+            }
+        }
 
+        private void TmrPersonal_Tick(object sender, EventArgs e)
+        {
+            DiseniarDtvPersonal();
+            TmrPersonal.Stop();
+        }
+
+        private void btnGuardarCambiosPersonal_Click(object sender, EventArgs e)
+        {
+            EditarPersonal();
+        }
+        private void EditarPersonal()
+        {
+            LPersonal parametros=new LPersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.id_personal=idPersonal;
+            parametros.nombres = txtNombres.Text;
+            parametros.cedula = txtCedula.Text;
+            parametros.pais = cbPaises.Text;
+            parametros.id_cargo = idCargo;
+            parametros.sueldo_hora = Convert.ToDouble(txtSueldo.Text);
+            if(funcion.EditarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+                pnRegistros.Visible = false;
+            }
         }
     }
 }
