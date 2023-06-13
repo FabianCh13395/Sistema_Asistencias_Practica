@@ -157,5 +157,23 @@ namespace Asistencias.datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
+        public void ContarPersonal(ref int contador)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("Select Count(id_personal) from Personal",CONEXIONMAESTRA.conexionDB);
+                contador = Convert.ToInt32( cmd.ExecuteScalar());
+            }
+            catch (Exception )
+            {
+                contador = 0;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
     }
 }

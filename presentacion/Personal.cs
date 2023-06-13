@@ -84,6 +84,7 @@ namespace Asistencias.presentacion
             parametros.sueldo_hora = Convert.ToDouble( txtSueldo.Text);
             if (dpersonal.InsertarPersonal(parametros) == true)
             {
+                ReiniciarPaginado();
                 MostrarPersonal();
                 pnRegistros.Visible= false;
             }
@@ -220,6 +221,7 @@ namespace Asistencias.presentacion
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             pnRegistros.Visible=false;
+            pnPaginado.Visible=true;
         }
 
         private void btnGuardarEditadoC_Click(object sender, EventArgs e)
@@ -243,9 +245,31 @@ namespace Asistencias.presentacion
 
         private void Personal_Load(object sender, EventArgs e)
         {
+            ReiniciarPaginado();
             MostrarPersonal();
+            
         }
-
+        private void ReiniciarPaginado()
+        {
+            desde = 1;
+            hasta = 10;
+            ContarPersonal();
+            if (contador > hasta)
+            {
+                btnPagSiguiente.Visible = true;
+                btnPagAnterior.Visible = false;
+                btnUltimaPag.Visible = true;
+                btnPrimeraPag.Visible = true;
+            }
+            else
+            {
+                btnPagSiguiente.Visible = false;
+                btnPagAnterior.Visible = false;
+                btnUltimaPag.Visible = false;
+                btnPrimeraPag.Visible = false;
+            }
+            Paginado();
+        }
         private void dtListadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dtListadoPersonal.Columns["Eliminar"].Index)
@@ -346,6 +370,117 @@ namespace Asistencias.presentacion
                 MostrarPersonal();
                 pnRegistros.Visible = false;
             }
+        }
+
+        private void btnPagSiguiente_Click(object sender, EventArgs e)
+        {
+            desde += 10;
+            hasta += 10;
+            MostrarPersonal();
+            ContarPersonal();
+            if (contador > hasta)
+            {
+                btnPagSiguiente.Visible = true;
+                btnPagAnterior.Visible = true;
+            }
+            else
+            {
+                btnPagSiguiente.Visible = false;
+                btnPagAnterior.Visible = true;
+            }
+            Paginado();
+        }
+        private void ContarPersonal()
+        {
+            Dpersonal funcion = new Dpersonal();
+            funcion.ContarPersonal(ref contador);
+        }
+        private void Paginado()
+        {
+            try
+            {
+                lblNPagina.Text = (hasta / items_por_pagina).ToString();
+                lblPagTotal.Text = Math.Ceiling(Convert.ToSingle(contador) / items_por_pagina).ToString() ;
+                totalPaginas = Convert.ToInt32(lblPagTotal.Text);   
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnPagAnterior_Click(object sender, EventArgs e)
+        {
+            desde -= 10;
+            hasta -= 10;
+            MostrarPersonal();
+            ContarPersonal();
+            if (contador > hasta)
+            {
+                btnPagSiguiente.Visible = true;
+                btnPagAnterior.Visible=true;
+            }
+            else
+            {
+                btnPagSiguiente.Visible = false;
+                btnPagAnterior.Visible = true;
+            }
+            if (desde == 1)
+            {
+                ReiniciarPaginado();
+            }
+            Paginado();
+        }
+
+        private void btnUltimaPag_Click(object sender, EventArgs e)
+        {
+            hasta = totalPaginas * items_por_pagina;
+            desde = hasta - 9;
+            MostrarPersonal();
+            ContarPersonal();
+            if (contador > hasta)
+            {
+                btnPagSiguiente.Visible = false;
+                btnPagAnterior.Visible = true;
+            }
+            else
+            {
+                btnPagSiguiente.Visible = false;
+                btnPagAnterior.Visible = true;
+            }
+            Paginado();
+        }
+
+        private void btnPrimeraPag_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
+        }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+           
+            BuscarPersonal();
+        }
+        private void BuscarPersonal()
+        {
+            
+            DataTable dt = new DataTable();
+            Dpersonal funcion=new Dpersonal();
+            funcion.BuscarPersonal(ref dt, desde, hasta,txtBuscador.Text);
+            dtListadoPersonal.DataSource = dt;
+            DiseniarDtvPersonal();
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
+        }
+
+        private void txtBuscador_Click(object sender, EventArgs e)
+        {
+            txtBuscador.Clear();
         }
     }
 }
