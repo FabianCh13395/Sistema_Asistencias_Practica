@@ -176,18 +176,21 @@ namespace Asistencias.datos
             }
         }
 
-        public void BuscarPersonalCedula(ref DataTable dt, string buscador)
+        public void BuscarPersonalCedula(ref DataTable dtPersonal, string buscador)
         {
             try
             {
                 CONEXIONMAESTRA.abrir();
                 SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalCedula", CONEXIONMAESTRA.conexionDB);
-                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
-                da.Fill(dt);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@buscador",buscador);
+                da.Fill(dtPersonal);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace);
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
+                
             }
             finally
             {
@@ -196,24 +199,6 @@ namespace Asistencias.datos
 
         }
 
-        public void BuscarAsistenciasId(ref DataTable dt,int idPersona)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("buscarAsistenciasId", CONEXIONMAESTRA.conexionDB);
-                da.SelectCommand.Parameters.AddWithValue("@IdPersonal", idPersona);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-
-        }
+        
     }
 }

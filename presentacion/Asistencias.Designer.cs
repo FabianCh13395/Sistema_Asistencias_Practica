@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnPrincipal = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtICedula = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
-            this.txtEntrada = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtEntrada = new System.Windows.Forms.TextBox();
+            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txtICedula = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnObservacion = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rchObservacion = new System.Windows.Forms.RichTextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.rchObservacion = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tmTiempo = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
@@ -66,18 +66,6 @@
             this.panel1.Size = new System.Drawing.Size(1197, 52);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 52);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ASISTOR";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
@@ -91,6 +79,18 @@
             this.btnIniciarSesion.TabIndex = 1;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 52);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ASISTOR";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnPrincipal
             // 
@@ -109,81 +109,33 @@
             this.pnPrincipal.Size = new System.Drawing.Size(751, 781);
             this.pnPrincipal.TabIndex = 1;
             // 
-            // panel3
+            // txtNombre
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(751, 230);
-            this.panel3.TabIndex = 0;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(269, 504);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
+            this.txtNombre.Size = new System.Drawing.Size(291, 23);
+            this.txtNombre.TabIndex = 9;
+            this.txtNombre.Text = "******";
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // txtEntrada
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(0, 230);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(751, 40);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Registro de Asistencias";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(66, 297);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "CEDULA:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(80, 372);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "FECHA:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(92, 409);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "HORA:";
-            // 
-            // txtICedula
-            // 
-            this.txtICedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtICedula.Location = new System.Drawing.Point(188, 299);
-            this.txtICedula.Name = "txtICedula";
-            this.txtICedula.Size = new System.Drawing.Size(217, 26);
-            this.txtICedula.TabIndex = 5;
-            this.txtICedula.TextChanged += new System.EventHandler(this.txtICedula_TextChanged);
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
-            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtFecha.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFecha.Location = new System.Drawing.Point(188, 374);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.ReadOnly = true;
-            this.txtFecha.Size = new System.Drawing.Size(217, 23);
-            this.txtFecha.TabIndex = 6;
-            this.txtFecha.Text = "10/15/2023";
+            this.txtEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.txtEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.txtEntrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.txtEntrada.Location = new System.Drawing.Point(269, 461);
+            this.txtEntrada.Name = "txtEntrada";
+            this.txtEntrada.ReadOnly = true;
+            this.txtEntrada.Size = new System.Drawing.Size(276, 23);
+            this.txtEntrada.TabIndex = 8;
+            this.txtEntrada.Text = "***********";
+            this.txtEntrada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtHora
             // 
@@ -198,33 +150,81 @@
             this.txtHora.TabIndex = 7;
             this.txtHora.Text = "14:55";
             // 
-            // txtEntrada
+            // txtFecha
             // 
-            this.txtEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
-            this.txtEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtEntrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.txtEntrada.Location = new System.Drawing.Point(300, 461);
-            this.txtEntrada.Name = "txtEntrada";
-            this.txtEntrada.ReadOnly = true;
-            this.txtEntrada.Size = new System.Drawing.Size(130, 23);
-            this.txtEntrada.TabIndex = 8;
-            this.txtEntrada.Text = "***********";
-            this.txtEntrada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.txtFecha.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtFecha.Location = new System.Drawing.Point(188, 374);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
+            this.txtFecha.Size = new System.Drawing.Size(217, 23);
+            this.txtFecha.TabIndex = 6;
+            this.txtFecha.Text = "10/15/2023";
             // 
-            // txtNombre
+            // txtICedula
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(300, 499);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(130, 23);
-            this.txtNombre.TabIndex = 9;
-            this.txtNombre.Text = "******";
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtICedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.txtICedula.Location = new System.Drawing.Point(188, 299);
+            this.txtICedula.Name = "txtICedula";
+            this.txtICedula.Size = new System.Drawing.Size(217, 26);
+            this.txtICedula.TabIndex = 5;
+            this.txtICedula.TextChanged += new System.EventHandler(this.txtICedula_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(92, 409);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "HORA:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(80, 372);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "FECHA:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(66, 297);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CEDULA:";
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(0, 230);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(751, 40);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Registro de Asistencias";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(751, 230);
+            this.panel3.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -249,17 +249,19 @@
             this.pnObservacion.TabIndex = 2;
             this.pnObservacion.Visible = false;
             // 
-            // label6
+            // btnConfirmar
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(251, 33);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Observación";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(42, 219);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(170, 52);
+            this.btnConfirmar.TabIndex = 4;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // rchObservacion
             // 
@@ -273,18 +275,17 @@
             this.rchObservacion.TabIndex = 3;
             this.rchObservacion.Text = "";
             // 
-            // btnConfirmar
+            // label6
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(42, 219);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(170, 52);
-            this.btnConfirmar.TabIndex = 4;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(251, 33);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Observación";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tmTiempo
             // 

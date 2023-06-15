@@ -482,5 +482,10 @@ namespace Asistencias.presentacion
         {
             txtBuscador.Clear();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
