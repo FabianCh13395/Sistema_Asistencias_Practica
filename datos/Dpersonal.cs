@@ -175,5 +175,45 @@ namespace Asistencias.datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
+        public void BuscarPersonalCedula(ref DataTable dt, string buscador)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalCedula", CONEXIONMAESTRA.conexionDB);
+                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+
+        }
+
+        public void BuscarAsistenciasId(ref DataTable dt,int idPersona)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("buscarAsistenciasId", CONEXIONMAESTRA.conexionDB);
+                da.SelectCommand.Parameters.AddWithValue("@IdPersonal", idPersona);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+
+        }
     }
 }

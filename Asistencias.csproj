@@ -52,6 +52,12 @@
     <Compile Include="logica\Bases.cs" />
     <Compile Include="logica\Lcargo.cs" />
     <Compile Include="logica\LPersonal.cs" />
+    <Compile Include="presentacion\Asistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\Asistencias.Designer.cs">
+      <DependentUpon>Asistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentacion\Asistencias.resx">
+      <DependentUpon>Asistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
