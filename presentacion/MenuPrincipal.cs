@@ -29,5 +29,13 @@ namespace Asistencias.presentacion
             control.Dock = DockStyle.Fill;
             pnlPadre.Controls.Add(control);
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            pnlPadre.Controls.Clear();
+            CtlUsuarios usuario=new CtlUsuarios();
+            usuario.Dock = DockStyle.Fill;
+            pnlPadre.Controls.Add(usuario);
+        }
     }
 }

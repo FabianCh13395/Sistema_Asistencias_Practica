@@ -44,21 +44,36 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2022.2.622.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2022.2.622.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2022.2.622.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datos\CONEXIONMAESTRA.cs" />
     <Compile Include="datos\DAsistencia.cs" />
     <Compile Include="datos\Dcargos.cs" />
+    <Compile Include="datos\DModulo.cs" />
+    <Compile Include="datos\DPermiso.cs" />
     <Compile Include="datos\Dpersonal.cs" />
+    <Compile Include="datos\DUsuario.cs" />
     <Compile Include="logica\Bases.cs" />
     <Compile Include="logica\LAsistencia.cs" />
     <Compile Include="logica\Lcargo.cs" />
+    <Compile Include="logica\LModulo.cs" />
+    <Compile Include="logica\LPermiso.cs" />
     <Compile Include="logica\LPersonal.cs" />
+    <Compile Include="logica\LUsuario.cs" />
     <Compile Include="presentacion\Asistencias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\Asistencias.Designer.cs">
       <DependentUpon>Asistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CtlUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\CtlUsuarios.Designer.cs">
+      <DependentUpon>CtlUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -77,12 +92,16 @@
     <EmbeddedResource Include="presentacion\Asistencias.resx">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CtlUsuarios.resx">
+      <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -147,6 +166,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check_comprobado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\American-Dad-PNG-HD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\American-Dad-PNG-Isolated-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fornite-Clark-Kent-PNG-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOL-PNG-Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-Heist-Dp-PNG-Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News-Reporter-PNG-Photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smiley-PNG-Transparent-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WALL-E-PNG-Transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
