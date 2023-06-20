@@ -10,7 +10,7 @@ namespace Asistencias.datos
 {
     public class CONEXIONMAESTRA
     {
-        public static string conexion = @"Data source=LAPTOP-7EN4EVCO\SQLEXPRESS;Initial Catalog=AsistorBD;Integrated Security=False;User Id=sa;Password=";
+        public static string conexion = @"Data source=LAPTOP-7EN4EVCO\SQLEXPRESS;Initial Catalog=AsistorBD;Integrated Security=False;User Id=sa;Password=15xyz1820111";
         public static SqlConnection conexionDB = new SqlConnection(conexion);
 
         public static void abrir()
