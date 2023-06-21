@@ -21,7 +21,8 @@ namespace Asistencias.datos
 
                 CONEXIONMAESTRA.abrir();
 				SqlCommand cmd = new SqlCommand("insertarUsuario", CONEXIONMAESTRA.conexionDB);
-				cmd.Parameters.AddWithValue("@nombres", parametros.nombres);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nombres", parametros.nombres);
 				cmd.Parameters.AddWithValue("@login", parametros.login);
 				cmd.Parameters.AddWithValue("@password",parametros.password);
 				cmd.Parameters.AddWithValue("@icono", parametros.icono);
@@ -31,7 +32,8 @@ namespace Asistencias.datos
 			}
 			catch (Exception ex )
 			{
-				MessageBox.Show( ex.StackTrace );
+				MessageBox.Show( ex.Message );
+				Console.WriteLine( ex.Message );
 				return false;
 				
 			}
@@ -57,6 +59,27 @@ namespace Asistencias.datos
 			{
 				CONEXIONMAESTRA.cerrar();
 
+			}
+		}
+        
+		public void obtenerIdUsuario(ref int idUsuario,string login)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("obtenerIdUsuario",CONEXIONMAESTRA.conexionDB);
+				cmd.CommandType=CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Login",login);
+				idUsuario =Convert.ToInt32( cmd.ExecuteScalar());
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
 			}
 		}
     }

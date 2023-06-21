@@ -38,7 +38,7 @@
             this.pnRegistro = new System.Windows.Forms.Panel();
             this.pnIconos = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pbAgregarIconoPc = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -69,12 +69,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dlgIcono = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRegistroPersonal)).BeginInit();
             this.pnRegistro.SuspendLayout();
             this.pnIconos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregarIconoPc)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -212,10 +213,10 @@
             // 
             this.pnIconos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
             this.pnIconos.Controls.Add(this.btnCancelar);
-            this.pnIconos.Controls.Add(this.pictureBox11);
+            this.pnIconos.Controls.Add(this.pbAgregarIconoPc);
             this.pnIconos.Controls.Add(this.flowLayoutPanel3);
             this.pnIconos.Controls.Add(this.flowLayoutPanel2);
-            this.pnIconos.Location = new System.Drawing.Point(812, 128);
+            this.pnIconos.Location = new System.Drawing.Point(23, 3);
             this.pnIconos.Name = "pnIconos";
             this.pnIconos.Size = new System.Drawing.Size(955, 579);
             this.pnIconos.TabIndex = 13;
@@ -233,16 +234,18 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pictureBox11
+            // pbAgregarIconoPc
             // 
-            this.pictureBox11.Image = global::Asistencias.Properties.Resources.boton_agregar;
-            this.pictureBox11.Location = new System.Drawing.Point(98, 387);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(197, 145);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 2;
-            this.pictureBox11.TabStop = false;
+            this.pbAgregarIconoPc.Image = global::Asistencias.Properties.Resources.boton_agregar;
+            this.pbAgregarIconoPc.Location = new System.Drawing.Point(98, 387);
+            this.pbAgregarIconoPc.Name = "pbAgregarIconoPc";
+            this.pbAgregarIconoPc.Size = new System.Drawing.Size(197, 145);
+            this.pbAgregarIconoPc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAgregarIconoPc.TabIndex = 2;
+            this.pbAgregarIconoPc.TabStop = false;
+            this.pbAgregarIconoPc.Click += new System.EventHandler(this.pbAgregarIconoPc_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -264,6 +267,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox8
             // 
@@ -274,6 +278,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 
@@ -284,6 +289,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox10
             // 
@@ -294,6 +300,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -315,6 +322,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -325,6 +333,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -335,6 +344,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -345,6 +355,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // lbAvisoIcono
             // 
@@ -356,6 +367,7 @@
             this.lbAvisoIcono.TabIndex = 12;
             this.lbAvisoIcono.Text = "Elija un icono";
             this.lbAvisoIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAvisoIcono.Click += new System.EventHandler(this.lbAvisoIcono_Click);
             // 
             // pbIcono
             // 
@@ -365,6 +377,8 @@
             this.pbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIcono.TabIndex = 11;
             this.pbIcono.TabStop = false;
+            this.pbIcono.Visible = false;
+            this.pbIcono.Click += new System.EventHandler(this.pbIcono_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -415,6 +429,7 @@
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // panel2
             // 
@@ -490,33 +505,35 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(159, 80);
+            this.txtPassword.Location = new System.Drawing.Point(156, 81);
+            this.txtPassword.MaxLength = 6;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(197, 22);
+            this.txtPassword.Size = new System.Drawing.Size(197, 33);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(156, 44);
+            this.txtUsuario.Location = new System.Drawing.Point(155, 41);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(197, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(197, 34);
             this.txtUsuario.TabIndex = 4;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(156, 13);
+            this.txtNombre.Location = new System.Drawing.Point(156, 3);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(197, 22);
+            this.txtNombre.Size = new System.Drawing.Size(197, 32);
             this.txtNombre.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label3.Location = new System.Drawing.Point(56, 41);
+            this.label3.Location = new System.Drawing.Point(56, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 25);
             this.label3.TabIndex = 2;
@@ -526,7 +543,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.Location = new System.Drawing.Point(19, 77);
+            this.label2.Location = new System.Drawing.Point(18, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 1;
@@ -562,6 +579,10 @@
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Width = 125;
             // 
+            // dlgIcono
+            // 
+            this.dlgIcono.FileName = "openFileDialog1";
+            // 
             // CtlUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -571,6 +592,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CtlUsuarios";
             this.Size = new System.Drawing.Size(1183, 838);
+            this.Load += new System.EventHandler(this.CtlUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -578,7 +600,7 @@
             this.pnRegistro.ResumeLayout(false);
             this.pnRegistro.PerformLayout();
             this.pnIconos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregarIconoPc)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -626,7 +648,7 @@
         private System.Windows.Forms.Label lbAvisoIcono;
         private System.Windows.Forms.PictureBox pbIcono;
         private System.Windows.Forms.Panel pnIconos;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pbAgregarIconoPc;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -640,5 +662,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.OpenFileDialog dlgIcono;
     }
 }
