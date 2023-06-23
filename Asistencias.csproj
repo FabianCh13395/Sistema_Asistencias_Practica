@@ -69,11 +69,23 @@
     <Compile Include="presentacion\Asistencias.Designer.cs">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\ConexionRemota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\ConexionRemota.Designer.cs">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\AsistenteInstalacion\EleccionServidor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\AsistenteInstalacion\EleccionServidor.Designer.cs">
       <DependentUpon>EleccionServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\InstalarBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\InstalarBD.Designer.cs">
+      <DependentUpon>InstalarBD.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>
@@ -106,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\AsistenteInstalacion\EleccionServidor.resx">
       <DependentUpon>EleccionServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\AsistenteInstalacion\InstalarBD.resx">
+      <DependentUpon>InstalarBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
@@ -214,6 +229,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red_lan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

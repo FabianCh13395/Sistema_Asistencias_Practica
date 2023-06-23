@@ -16,5 +16,19 @@ namespace Asistencias.presentacion.AsistenteInstalacion
         {
             InitializeComponent();
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            InstalarBD frm = new InstalarBD();
+            frm.ShowDialog();
+        }
+
+        private void btnPuntoControl_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            ConexionRemota frm = new ConexionRemota();
+            frm.ShowDialog();
+        }
     }
 }

@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtArgumentosini.Text" xml:space="preserve">
+    <value>;SQL Server 2014 Configuration File
+[OPTIONS]
+
+
+
+; Especifica un flujo de trabajo de instalación, como INSTALL, UNINSTALL o UPGRADE. Es un parámetro necesario. 
+
+ACTION="Install"
+
+; No se ha definido aún ayuda detallada para el argumento de la línea de comandos ROLE. 
+
+ROLE="AllFeatures_WithDefaults"
+
+; Use el parámetro /ENU para instalar la versión en inglés de SQL Server en el sistema operativo Windows traducido. 
+
+ENU="False"
+
+; Parámetro que controla el comportamiento de la interfaz de usuario. Los valores válidos son Normal para la interfaz de usuario completa, AutoAdvance para una interfaz de usuario simplificada y EnableUIOnServerCore para omitir la parte gráfica de la instalación de Server Core. 
+
+
+; La instalación no mostrará ninguna interfaz de usuario. 
+
+QUIET="False"
+
+; El programa de instalación sólo mostrará el progreso, sin la interacción del usuario. 
+
+QUIETSIMPLE="True"
+
+; Especifique si el programa de instalación de SQL Server debe detectar e incluir actualizaciones del producto. Los valores válidos son True y False o 1 y 0. De forma predeterminada, el programa de instalación de SQL Server incluirá las actualizaciones que encuentre. 
+
+UpdateEnabled="False"
+
+; Especifique si se puede informar de los errores a Microsoft para mejorar las futuras versiones de SQL Server. Elija 1 o True para habilitar esta característica, o bien 0 o False para deshabilitarla. 
+
+ERRORREPORTING="False"
+
+; Si se proporciona este parámetro, el equipo usará Microsoft Update para comprobar las actualizaciones. 
+
+USEMICROSOFTUPDATE="False"
+
+; Especifica las características que se van a instalar, desinstalar o actualizar. La lista de las características de nivel superior incluye SQL, AS, RS, IS, MDS y Herramientas. La característica SQL instalará el motor de base de datos, la replicación, el texto completo y el servidor Data Quality Services (DQS). La característica Herramientas instalará las herramientas de administración, los componentes de Libros en pantalla, SQL Server Data Tools y el resto de los componentes compartidos. 
+
+FEATURES=SQLENGINE,REPLICATION
+
+; Especifique la ubicación en la que el programa de instalación de SQL Server obtendrá actualizaciones del producto. Los valores válidos son "MU" para buscar en Microsoft Update, una ruta de acceso de carpeta válida, una ruta de acceso relativa, como .\MisActualizaciones, o un recurso compartido UNC. De forma predeterminada, el programa de instalación de SQL Server buscará en Microsoft Update o en el servicio Windows Update mediante Windows Server Update Services. 
+
+UpdateSource="MU"
+
+; Muestra el uso de los parámetros de la línea de comandos 
+
+HELP="False"
+
+; Especifica que el registro de instalación detallado debe redireccionarse a la consola. 
+
+INDICATEPROGRESS="False"
+
+; Especifica que el programa de instalación debe realizar la instalación en WOW64. Este argumento de la línea de comandos no se admite en sistemas IA64 ni de 32 bits. 
+
+X86="False"
+
+; Especifique el directorio de instalación raíz de los componentes compartidos. Este directorio no cambia después de instalar los componentes compartidos. 
+
+INSTALLSHAREDDIR="C:\Program Files\Microsoft SQL Server"
+
+; Especifique una instancia predeterminada o con nombre. MSSQLSERVER y SQLExpress son las instancias predeterminadas de las ediciones que no son Express y de las Express, respectivamente. Se requiere este parámetro al instalar el motor de base de datos de SQL Server (SQL), Analysis Services (AS) o Reporting Services (RS). 
+
+INSTANCENAME="PRUEBAFINAL22"
+
+; Especifique si los datos de uso de las características de SQL Server se pueden recopilar y enviar a Microsoft. Elija 1 o True para habilitar esta característica, o bien 0 o False para deshabilitarla. 
+
+SQMREPORTING="False"
+
+; Especifique el identificador de instancia de las características de SQL Server que ha indicado. Las estructuras de directorios y del Registro, así como los nombres de los servicios SQL Server incorporarán el identificador de instancia de SQL Server. 
+
+INSTANCEID="PRUEBAFINAL22"
+
+; Especifique el directorio de instalación. 
+
+INSTANCEDIR="C:\Program Files (x86)\Microsoft SQL Server"
+
+; Nombre de cuenta del Agente 
+
+AGTSVCACCOUNT="NT AUTHORITY\Servicio de red"
+
+; Iniciar servicio automáticamente después de la instalación.  
+
+AGTSVCSTARTUPTYPE="Disabled"
+
+; Puerto de comunicación TCP del brick de CM 
+
+COMMFABRICPORT="0"
+
+; Cómo usará la matriz las redes privadas 
+
+COMMFABRICNETWORKLEVEL="0"
+
+; Cómo se protegerá la comunicación entre bricks 
+
+COMMFABRICENCRYPTION="0"
+
+; Puerto TCP usado por el brick de CM 
+
+MATRIXCMBRICKCOMMPORT="0"
+
+; Tipo de inicio para el servicio SQL Server. 
+
+SQLSVCSTARTUPTYPE="Automatic"
+
+; Nivel para habilitar la característica FILESTREAM en (0, 1, 2 o 3). 
+
+FILESTREAMLEVEL="0"
+
+; Establézcalo en "1" para habilitar RANU para SQL Server Express. 
+
+ENABLERANU="True"
+
+; Especifica una intercalación de Windows o SQL que se va a utilizar para el motor de base de datos. 
+
+SQLCOLLATION="Modern_Spanish_CI_AS"
+
+; Cuenta para el servicio de SQL Server: Dominio\Usuario o cuenta de sistema. 
+
+SQLSVCACCOUNT="NT Service\MSSQL$PRUEBAFINAL22"
+
+; Cuentas de Windows que se suministran como administradores del sistema de SQL Server. 
+
+
+; Autenticación de Windows predeterminada. Use "SQL" para el modo mixto de autenticación de Windows. 
+
+
+; Aprovisione el usuario actual como administrador del sistema del motor de base de datos para %SQL_PRODUCT_SHORT_NAME% Express. 
+
+ADDCURRENTUSERASSQLADMIN="False"
+
+; Especifique 0 para deshabilitar el protocolo TCP/IP, o 1 para habilitarlo. 
+
+TCPENABLED="1"
+
+; Especifique 0 para deshabilitar el protocolo Named Pipes, o 1 para habilitarlo. 
+
+NPENABLED="0"
+
+; Tipo de inicio para el servicio SQL Server Browser. 
+
+BROWSERSVCSTARTUPTYPE="Disabled"</value>
+  </data>
+  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
+    <value>CREATE LOGIN raptor WITH PASSWORD = '13395'
+GO
+Use AsistorBD ;
+GO
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'raptor')
+BEGIN
+    CREATE USER [raptor] FOR LOGIN [raptor]
+    EXEC sp_addrolemember N'db_owner', N'raptor'
+    EXEC master..sp_addsrvrolemember @loginame = N'raptor', @rolename = N'sysadmin'
+END;
+GO</value>
+  </data>
+  <data name="txtCrear_procedimientos.Text" xml:space="preserve">
+    <value>USE [master]
+GO
+/****** Object:  Database [AsistorBD]    Script Date: 23/6/2023 17:55:51 ******/
+CREATE DATABASE [AsistorBD]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'AsistorBD', FILENAME = N'D:\Programas\MSSQL15.SQLEXPRESS\MSSQL\DATA\AsistorBD.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'AsistorBD_log', FILENAME = N'D:\Programas\MSSQL15.SQLEXPRESS\MSSQL\DATA\AsistorBD_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [AsistorBD] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [AsistorBD].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [AsistorBD] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [AsistorBD] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [AsistorBD] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [AsistorBD] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [AsistorBD] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [AsistorBD] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [AsistorBD] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [AsistorBD] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [AsistorBD] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [AsistorBD] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [AsistorBD] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [AsistorBD] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [AsistorBD] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [AsistorBD] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [AsistorBD] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [AsistorBD] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [AsistorBD] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [AsistorBD] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [AsistorBD] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [AsistorBD] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [AsistorBD] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [AsistorBD] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [AsistorBD] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [AsistorBD] SET  MULTI_USER 
+GO
+ALTER DATABASE [AsistorBD] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [AsistorBD] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [AsistorBD] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [AsistorBD] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [AsistorBD] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [AsistorBD] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [AsistorBD] SET QUERY_STORE = OFF
+GO
+USE [AsistorBD]
+GO
+/****** Object:  Table [dbo].[Asistencia]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Asistencia](
+	[id_asistencias] [int] IDENTITY(1,1) NOT NULL,
+	[id_personal] [int] NULL,
+	[fecha_entrada] [datetime] NULL,
+	[fecha_salida] [datetime] NULL,
+	[estado] [varchar](50) NULL,
+	[horas] [numeric](18, 2) NULL,
+	[observacion] [varchar](max) NULL,
+ CONSTRAINT [PK_Asistencia] PRIMARY KEY CLUSTERED 
+(
+	[id_asistencias] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Cargo]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Cargo](
+	[id_cargo] [int] IDENTITY(1,1) NOT NULL,
+	[cargo] [varchar](max) NULL,
+	[sueldoPorHora] [numeric](18, 2) NULL,
+ CONSTRAINT [PK_Cargo] PRIMARY KEY CLUSTERED 
+(
+	[id_cargo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Modulo]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Modulo](
+	[idModulo] [int] IDENTITY(1,1) NOT NULL,
+	[modulo] [varchar](max) NULL,
+ CONSTRAINT [PK_Modulo] PRIMARY KEY CLUSTERED 
+(
+	[idModulo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Permiso]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Permiso](
+	[idPermiso] [int] IDENTITY(1,1) NOT NULL,
+	[id_Modulo] [int] NULL,
+	[id_Usuario] [int] NULL,
+ CONSTRAINT [PK_Permiso] PRIMARY KEY CLUSTERED 
+(
+	[idPermiso] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Personal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Personal](
+	[id_personal] [int] IDENTITY(1,1) NOT NULL,
+	[nombres] [varchar](max) NULL,
+	[cedula] [varchar](max) NULL,
+	[pais] [varchar](max) NULL,
+	[id_cargo] [int] NULL,
+	[sueldoPorHora] [numeric](18, 2) NULL,
+	[codigo] [varchar](max) NULL,
+	[estado] [varchar](max) NULL,
+ CONSTRAINT [PK_Personal] PRIMARY KEY CLUSTERED 
+(
+	[id_personal] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Usuario]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuario](
+	[idUsuario] [int] IDENTITY(1,1) NOT NULL,
+	[nombresApellidos] [varchar](100) NULL,
+	[login] [varchar](50) NULL,
+	[password] [varchar](50) NULL,
+	[icono] [image] NULL,
+	[estado] [varchar](50) NULL,
+ CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
+(
+	[idUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Asistencia]  WITH CHECK ADD  CONSTRAINT [FK_Asistencia_Personal] FOREIGN KEY([id_personal])
+REFERENCES [dbo].[Personal] ([id_personal])
+GO
+ALTER TABLE [dbo].[Asistencia] CHECK CONSTRAINT [FK_Asistencia_Personal]
+GO
+ALTER TABLE [dbo].[Permiso]  WITH CHECK ADD  CONSTRAINT [FK_Permiso_Modulo] FOREIGN KEY([id_Modulo])
+REFERENCES [dbo].[Modulo] ([idModulo])
+GO
+ALTER TABLE [dbo].[Permiso] CHECK CONSTRAINT [FK_Permiso_Modulo]
+GO
+ALTER TABLE [dbo].[Permiso]  WITH CHECK ADD  CONSTRAINT [FK_Permiso_Usuario] FOREIGN KEY([id_Usuario])
+REFERENCES [dbo].[Usuario] ([idUsuario])
+GO
+ALTER TABLE [dbo].[Permiso] CHECK CONSTRAINT [FK_Permiso_Usuario]
+GO
+ALTER TABLE [dbo].[Personal]  WITH CHECK ADD  CONSTRAINT [FK_Personal_Cargo] FOREIGN KEY([id_cargo])
+REFERENCES [dbo].[Cargo] ([id_cargo])
+GO
+ALTER TABLE [dbo].[Personal] CHECK CONSTRAINT [FK_Personal_Cargo]
+GO
+/****** Object:  StoredProcedure [dbo].[buscarAsistenciasId]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[buscarAsistenciasId]
+@IdPersonal int 
+as
+select* from Asistencia
+where id_personal= @IdPersonal and Asistencia.estado='ENTRADA'
+GO
+/****** Object:  StoredProcedure [dbo].[buscarCargos]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[buscarCargos]
+@buscador varchar(50)
+as
+Select id_cargo,cargo,sueldoPorHora as Sueldo from Cargo 
+where  cargo Like '%'+@buscador+'%'
+GO
+/****** Object:  StoredProcedure [dbo].[BuscarPersonal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[BuscarPersonal]
+@Desde int,
+@Hasta int,
+@Buscador varchar(50)
+as
+set Nocount On;
+Select 
+id_personal,nombres,cedula,sueldoPorHora,cargo,id_cargo,estado,codigo,pais
+from 
+(Select id_personal, nombres,cedula,Personal.sueldoPorHora,Cargo.cargo,Personal.id_cargo,estado,codigo,pais,
+ROW_NUMBER() Over(Order by id_personal) 'Numero_de_fila'
+from Personal
+inner join Cargo on Cargo.id_cargo=Personal.id_cargo) as Paginado
+where (Paginado.Numero_de_fila &gt;=@Desde) and (Paginado.Numero_de_fila &lt;=@Hasta) 
+and (nombres + cedula Like '%'+@Buscador+'%')
+GO
+/****** Object:  StoredProcedure [dbo].[BuscarPersonalCedula]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[BuscarPersonalCedula]
+@buscador varchar(MAX)
+as
+select * from Personal
+where cedula= @buscador
+GO
+/****** Object:  StoredProcedure [dbo].[confirmarSalida]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[confirmarSalida]
+@IdPersonal int,
+@fecha_salida datetime,
+@horas numeric(18,2)
+as
+update Asistencia set
+fecha_salida=@fecha_salida,horas=@horas,estado='SALIDA'
+where id_personal=@IdPersonal and estado='ENTRADA'
+GO
+/****** Object:  StoredProcedure [dbo].[editarCargo]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[editarCargo]
+@Id int,
+@cargo varchar(max),
+@sueldo as numeric(18,2)
+as
+if Exists(Select cargo from Cargo where cargo=@cargo and id_cargo &lt;&gt;@Id)
+Raiserror('Ya existe un cargo con este nombre ,Ingrese uno nuevo',16,1)
+else
+update Cargo set cargo=@cargo,sueldoPorHora=@sueldo
+where id_cargo=@Id
+GO
+/****** Object:  StoredProcedure [dbo].[editarPersonal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[editarPersonal]
+@id_personal int,
+@nombres  varchar(max),
+@cedula varchar(max),
+@pais varchar(max),
+@id_cargo int,
+@sueldoPorHora numeric(18,2)
+as
+if Exists(Select cedula from Personal where cedula=@cedula and id_personal&lt;&gt; @id_personal)
+Raiserror('Ya existe un registro con esta identificacion',16,1)
+else
+Update Personal set
+nombres=@nombres,cedula=@cedula,pais=@pais,id_cargo=@id_cargo,sueldoPorHora=@sueldoPorHora
+where id_personal=@id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[eliminarPermisos]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[eliminarPermisos]
+@IdUsuario int
+as 
+delete from Permiso
+where id_Usuario=@IdUsuario
+GO
+/****** Object:  StoredProcedure [dbo].[eliminarPersonal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[eliminarPersonal]
+@id_personal int 
+as
+Update Personal set estado='ELIMINADO'
+where id_personal=@id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[insertarAsistencias]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[insertarAsistencias]
+@IdPersonal int,
+@fecha_entrada datetime,
+@fecha_salida datetime,
+@estado varchar(50),
+@horas numeric(18,2),
+@observacion varchar(MAX)
+as
+insert into Asistencia 
+values(@IdPersonal,@fecha_entrada,@fecha_salida,@estado,@horas,@observacion)
+GO
+/****** Object:  StoredProcedure [dbo].[insertarCargo]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[insertarCargo]
+@cargo varchar(max),
+@sueldoPorHora numeric(18,2)
+as
+if EXISTS(Select cargo from Cargo where cargo=@cargo)
+RAISERROR('YA EXISTE UN CARGO CON ESTE NOMBRE,INGRESE DE NUEVO',16,1)
+else
+INSERT into Cargo values(@cargo,@sueldoPorHora)
+GO
+/****** Object:  StoredProcedure [dbo].[insertarPermisos]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[insertarPermisos]
+@IdModulo int,
+@IdUsuario int
+as
+insert into Permiso
+values(@IdModulo,@IdUsuario)
+GO
+/****** Object:  StoredProcedure [dbo].[InsertarPersonal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[InsertarPersonal]
+@nombres varchar(max),
+@cedula varchar(max),
+@pais varchar(max),
+@id_cargo int,
+@sueldoPorHora numeric(18,2)
+as
+declare @estado varchar(max)
+declare @codigo varchar(max)
+declare @id_personal int
+set @estado='ACTIVO'
+set @codigo='-'
+if Exists(select cedula from Personal where cedula=@cedula)
+Raiserror('Ya existe un registro con ese numero de cedula',16,1)
+else
+Insert into Personal
+values(@nombres,@cedula ,@pais ,@id_cargo,@sueldoPorHora,@codigo ,@estado )
+
+Select @id_personal=SCOPE_IDENTITY()
+Update Personal set codigo=@id_personal where id_personal=@id_personal
+GO
+/****** Object:  StoredProcedure [dbo].[insertarUsuario]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[insertarUsuario]
+@nombres varchar(100),
+@login varchar(50),
+@password varchar(50),
+@icono image,
+@estado varchar(50)
+as
+if Exists(Select * from Usuario where login=@login)
+RAISERROR ('Ya existe un registro con ese usuario, por favor ingrese de nuevo',16,1)
+else
+insert into Usuario
+values(@nombres,@login,@password,@icono,@estado)
+GO
+/****** Object:  StoredProcedure [dbo].[mostrarPermisos]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[mostrarPermisos]
+@idusuario int
+as 
+select id_Modulo from Permiso where id_Usuario=@idusuario
+GO
+/****** Object:  StoredProcedure [dbo].[mostrarPersonal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[mostrarPersonal]
+@Desde int,
+@Hasta int
+as
+set Nocount On;
+Select 
+id_personal,nombres,cedula,sueldoPorHora,cargo,id_cargo,estado,codigo,pais
+from 
+(Select id_personal, nombres,cedula,Personal.sueldoPorHora,Cargo.cargo,Personal.id_cargo,estado,codigo,pais,
+ROW_NUMBER() Over(Order by id_personal) 'Numero_de_fila'
+from Personal
+inner join Cargo on Cargo.id_cargo=Personal.id_cargo) as Paginado
+where (Paginado.Numero_de_fila &gt;=@Desde) and (Paginado.Numero_de_fila &lt;=@Hasta)
+GO
+/****** Object:  StoredProcedure [dbo].[obtenerIdUsuario]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[obtenerIdUsuario]
+@Login varchar(50)
+as
+select idUsuario from Usuario 
+where login=@Login
+GO
+/****** Object:  StoredProcedure [dbo].[restaurar_personal]    Script Date: 23/6/2023 17:55:51 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[restaurar_personal]
+@Id_personal int
+as 
+update Personal set  estado='ACTIVO'
+where id_personal=@Id_personal
+GO
+USE [master]
+GO
+ALTER DATABASE [AsistorBD] SET  READ_WRITE 
+GO</value>
+  </data>
+</root>
