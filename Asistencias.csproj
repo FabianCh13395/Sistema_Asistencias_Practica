@@ -69,11 +69,23 @@
     <Compile Include="presentacion\Asistencias.Designer.cs">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\EleccionServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\AsistenteInstalacion\EleccionServidor.Designer.cs">
+      <DependentUpon>EleccionServidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="presentacion\CtlUsuarios.Designer.cs">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -92,8 +104,14 @@
     <EmbeddedResource Include="presentacion\Asistencias.resx">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\AsistenteInstalacion\EleccionServidor.resx">
+      <DependentUpon>EleccionServidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -190,6 +208,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WALL-E-PNG-Transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_lan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

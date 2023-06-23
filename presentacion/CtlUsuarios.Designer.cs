@@ -216,7 +216,7 @@
             this.pnIconos.Controls.Add(this.pbAgregarIconoPc);
             this.pnIconos.Controls.Add(this.flowLayoutPanel3);
             this.pnIconos.Controls.Add(this.flowLayoutPanel2);
-            this.pnIconos.Location = new System.Drawing.Point(23, 3);
+            this.pnIconos.Location = new System.Drawing.Point(494, 175);
             this.pnIconos.Name = "pnIconos";
             this.pnIconos.Size = new System.Drawing.Size(955, 579);
             this.pnIconos.TabIndex = 13;
