@@ -82,5 +82,22 @@ namespace Asistencias.datos
 				CONEXIONMAESTRA.cerrar();
 			}
 		}
+		public void verificarUsuarios(ref string indicador)
+		{
+			try
+			{
+				int IdUser;
+				
+				CONEXIONMAESTRA.abrir();
+				SqlCommand da = new SqlCommand("Select idUsuario from Usuario", CONEXIONMAESTRA.conexionDB);
+				IdUser = Convert.ToInt32(da.ExecuteScalar());
+				CONEXIONMAESTRA.cerrar();
+				indicador = "Correcto";
+			}
+			catch (Exception )
+			{
+				indicador = "Incorrecto";
+			}
+		}
     }
 }

@@ -31,12 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnIngresoContrasenia = new System.Windows.Forms.Panel();
+            this.btnCambiarUsuario = new System.Windows.Forms.Button();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -49,22 +47,24 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCero = new System.Windows.Forms.Button();
             this.btnBorrarUno = new System.Windows.Forms.Button();
-            this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.btnCambiarUsuario = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnUsuario = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnIngresoContrasenia.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,7 +76,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Asistencias.Properties.Resources.MiLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(225, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,21 +89,48 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(12, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 62);
+            this.label1.Size = new System.Drawing.Size(227, 62);
             this.label1.TabIndex = 0;
             this.label1.Text = "AsisTor";
             // 
-            // panel2
+            // pnIngresoContrasenia
             // 
-            this.panel2.Controls.Add(this.btnCambiarUsuario);
-            this.panel2.Controls.Add(this.btnIniciarSesion);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(122, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(480, 679);
-            this.panel2.TabIndex = 1;
+            this.pnIngresoContrasenia.Controls.Add(this.btnCambiarUsuario);
+            this.pnIngresoContrasenia.Controls.Add(this.btnIniciarSesion);
+            this.pnIngresoContrasenia.Controls.Add(this.flowLayoutPanel1);
+            this.pnIngresoContrasenia.Controls.Add(this.panel3);
+            this.pnIngresoContrasenia.Controls.Add(this.label2);
+            this.pnIngresoContrasenia.Location = new System.Drawing.Point(122, 139);
+            this.pnIngresoContrasenia.Name = "pnIngresoContrasenia";
+            this.pnIngresoContrasenia.Size = new System.Drawing.Size(480, 679);
+            this.pnIngresoContrasenia.TabIndex = 1;
+            this.pnIngresoContrasenia.Visible = false;
+            // 
+            // btnCambiarUsuario
+            // 
+            this.btnCambiarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnCambiarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCambiarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnCambiarUsuario.Location = new System.Drawing.Point(133, 590);
+            this.btnCambiarUsuario.Name = "btnCambiarUsuario";
+            this.btnCambiarUsuario.Size = new System.Drawing.Size(247, 40);
+            this.btnCambiarUsuario.TabIndex = 5;
+            this.btnCambiarUsuario.Text = "Cambiar de Usuario";
+            this.btnCambiarUsuario.UseVisualStyleBackColor = true;
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnIniciarSesion.Location = new System.Drawing.Point(133, 544);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(247, 40);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -123,49 +150,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 350);
             this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 62);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 80);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Location = new System.Drawing.Point(38, 62);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(420, 5);
-            this.panel4.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.textBox1.Location = new System.Drawing.Point(38, 16);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 40);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(480, 62);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Iniciar Sesión";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn1
             // 
@@ -347,44 +331,69 @@
             this.btnBorrarUno.Text = "<=";
             this.btnBorrarUno.UseVisualStyleBackColor = true;
             // 
-            // btnIniciarSesion
+            // panel3
             // 
-            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(133, 544);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(247, 40);
-            this.btnIniciarSesion.TabIndex = 4;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 62);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(480, 80);
+            this.panel3.TabIndex = 2;
             // 
-            // btnCambiarUsuario
+            // panel4
             // 
-            this.btnCambiarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnCambiarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCambiarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnCambiarUsuario.Location = new System.Drawing.Point(133, 590);
-            this.btnCambiarUsuario.Name = "btnCambiarUsuario";
-            this.btnCambiarUsuario.Size = new System.Drawing.Size(247, 40);
-            this.btnCambiarUsuario.TabIndex = 5;
-            this.btnCambiarUsuario.Text = "Cambiar de Usuario";
-            this.btnCambiarUsuario.UseVisualStyleBackColor = true;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Location = new System.Drawing.Point(38, 62);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(420, 5);
+            this.panel4.TabIndex = 3;
             // 
-            // panel5
+            // textBox1
             // 
-            this.panel5.Controls.Add(this.flowLayoutPanel2);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(645, 286);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(552, 532);
-            this.panel5.TabIndex = 2;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.textBox1.Location = new System.Drawing.Point(38, 16);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(420, 40);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(480, 62);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Iniciar Sesión";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnUsuario
+            // 
+            this.pnUsuario.Controls.Add(this.flowLayoutPanelUsuarios);
+            this.pnUsuario.Controls.Add(this.label3);
+            this.pnUsuario.Location = new System.Drawing.Point(645, 286);
+            this.pnUsuario.Name = "pnUsuario";
+            this.pnUsuario.Size = new System.Drawing.Size(552, 532);
+            this.pnUsuario.TabIndex = 2;
+            this.pnUsuario.Visible = false;
+            // 
+            // flowLayoutPanelUsuarios
+            // 
+            this.flowLayoutPanelUsuarios.Location = new System.Drawing.Point(3, 139);
+            this.flowLayoutPanelUsuarios.Name = "flowLayoutPanelUsuarios";
+            this.flowLayoutPanelUsuarios.Size = new System.Drawing.Size(549, 393);
+            this.flowLayoutPanelUsuarios.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -395,31 +404,27 @@
             this.label3.Text = "Quien esta iniciando \r\nsesión?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 139);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(549, 393);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
             this.ClientSize = new System.Drawing.Size(1226, 891);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnUsuario);
+            this.Controls.Add(this.pnIngresoContrasenia);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnIngresoContrasenia.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
+            this.pnUsuario.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -429,7 +434,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnIngresoContrasenia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -449,8 +454,8 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCero;
         private System.Windows.Forms.Button btnBorrarUno;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel pnUsuario;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUsuarios;
         private System.Windows.Forms.Label label3;
     }
 }

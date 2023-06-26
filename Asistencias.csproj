@@ -116,6 +116,9 @@
     <EmbeddedResource Include="presentacion\Asistencias.resx">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\AsistenteInstalacion\ConexionRemota.resx">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\AsistenteInstalacion\EleccionServidor.resx">
       <DependentUpon>EleccionServidor.cs</DependentUpon>
     </EmbeddedResource>
