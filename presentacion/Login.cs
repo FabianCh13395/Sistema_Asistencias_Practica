@@ -1,4 +1,5 @@
 ﻿using Asistencias.datos;
+using Asistencias.logica;
 using Asistencias.presentacion.AsistenteInstalacion;
 using System;
 using System.Collections.Generic;
@@ -126,6 +127,101 @@ namespace Asistencias.presentacion
             pnIngresoContrasenia.Visible = true;
             pnIngresoContrasenia.Location=new Point((Width-pnIngresoContrasenia.Width)/2,(Height-pnIngresoContrasenia.Height)/2);
             pnUsuario.Visible = false;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            validarUsuarios();
+        }
+        private void validarUsuarios()
+        {
+            LUsuario parametros = new LUsuario();
+            DUsuario funcion=new DUsuario();
+            parametros.password=txtPassword.Text;
+            parametros.login = usuario;
+            funcion.validarUsuarios(parametros, ref idUsuario);
+            if (idUsuario > 0) 
+            {
+                Dispose();
+                MenuPrincipal frm=new MenuPrincipal();
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contraseña Erronea", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "1";
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "2";
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "3";
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "4";
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "5";
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "6";
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "7";
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "8";
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "9";
+        }
+
+        private void btnCero_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text += "0";
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+        }
+
+        private void btnBorrarUno_Click(object sender, EventArgs e)
+        {
+            int contador;
+            contador=txtPassword.Text.Length;
+            if (contador > 0)
+            {
+                txtPassword.Text=txtPassword.Text.Substring(0,txtPassword.Text.Length-1);
+            }
+        }
+
+        private void btnCambiarUsuario_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanelUsuarios.Controls.Clear();
+            DibujarUsuarios();
         }
     }
 }

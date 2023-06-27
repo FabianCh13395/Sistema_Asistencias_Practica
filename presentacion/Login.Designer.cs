@@ -49,7 +49,7 @@
             this.btnBorrarUno = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnUsuario = new System.Windows.Forms.Panel();
             this.flowLayoutPanelUsuarios = new System.Windows.Forms.FlowLayoutPanel();
@@ -118,6 +118,7 @@
             this.btnCambiarUsuario.TabIndex = 5;
             this.btnCambiarUsuario.Text = "Cambiar de Usuario";
             this.btnCambiarUsuario.UseVisualStyleBackColor = true;
+            this.btnCambiarUsuario.Click += new System.EventHandler(this.btnCambiarUsuario_Click);
             // 
             // btnIniciarSesion
             // 
@@ -131,6 +132,7 @@
             this.btnIniciarSesion.TabIndex = 4;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -156,6 +158,7 @@
             this.btn1.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -165,12 +168,14 @@
             this.btn1.TabIndex = 0;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
             this.btn2.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -180,12 +185,14 @@
             this.btn2.TabIndex = 1;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
             this.btn3.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -195,12 +202,14 @@
             this.btn3.TabIndex = 2;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn4
             // 
             this.btn4.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -210,12 +219,14 @@
             this.btn4.TabIndex = 3;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn5
             // 
             this.btn5.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -225,12 +236,14 @@
             this.btn5.TabIndex = 4;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn6
             // 
             this.btn6.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -240,12 +253,14 @@
             this.btn6.TabIndex = 5;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn7
             // 
             this.btn7.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -255,12 +270,14 @@
             this.btn7.TabIndex = 6;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn8
             // 
             this.btn8.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn8.FlatAppearance.BorderSize = 0;
+            this.btn8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -270,12 +287,14 @@
             this.btn8.TabIndex = 7;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn9
             // 
             this.btn9.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btn9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn9.FlatAppearance.BorderSize = 0;
+            this.btn9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btn9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -285,14 +304,16 @@
             this.btn9.TabIndex = 8;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btnBorrar
             // 
             this.btnBorrar.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBorrar.Location = new System.Drawing.Point(3, 252);
             this.btnBorrar.Name = "btnBorrar";
@@ -300,12 +321,14 @@
             this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnCero
             // 
             this.btnCero.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btnCero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCero.FlatAppearance.BorderSize = 0;
+            this.btnCero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnCero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -315,12 +338,14 @@
             this.btnCero.TabIndex = 10;
             this.btnCero.Text = "0";
             this.btnCero.UseVisualStyleBackColor = true;
+            this.btnCero.Click += new System.EventHandler(this.btnCero_Click);
             // 
             // btnBorrarUno
             // 
             this.btnBorrarUno.BackgroundImage = global::Asistencias.Properties.Resources.circulo;
             this.btnBorrarUno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBorrarUno.FlatAppearance.BorderSize = 0;
+            this.btnBorrarUno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBorrarUno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarUno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.btnBorrarUno.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -330,11 +355,12 @@
             this.btnBorrarUno.TabIndex = 11;
             this.btnBorrarUno.Text = "<=";
             this.btnBorrarUno.UseVisualStyleBackColor = true;
+            this.btnBorrarUno.Click += new System.EventHandler(this.btnBorrarUno_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtPassword);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 62);
             this.panel3.Name = "panel3";
@@ -350,17 +376,19 @@
             this.panel4.Size = new System.Drawing.Size(420, 5);
             this.panel4.TabIndex = 3;
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.textBox1.Location = new System.Drawing.Point(38, 16);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 40);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.txtPassword.Location = new System.Drawing.Point(38, 16);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(420, 40);
+            this.txtPassword.TabIndex = 0;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label2
             // 
@@ -438,7 +466,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCambiarUsuario;
         private System.Windows.Forms.Button btnIniciarSesion;

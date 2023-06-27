@@ -99,5 +99,27 @@ namespace Asistencias.datos
 				indicador = "Incorrecto";
 			}
 		}
+
+		public void validarUsuarios(LUsuario parametros,ref int id)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("validarUsuario", CONEXIONMAESTRA.conexionDB);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Password ", parametros.password);
+				cmd.Parameters.AddWithValue("@Login", parametros.login);
+				id= Convert.ToInt32(cmd.ExecuteScalar());
+			}
+			catch (Exception ex)
+			{
+				id = 0;
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
     }
 }
