@@ -278,18 +278,8 @@ END;
 GO</value>
   </data>
   <data name="txtCrear_procedimientos.Text" xml:space="preserve">
-    <value>USE [master]
-GO
-/****** Object:  Database [AsistorBD]    Script Date: 23/6/2023 17:55:51 ******/
-CREATE DATABASE [AsistorBD]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'AsistorBD', FILENAME = N'D:\Programas\MSSQL15.SQLEXPRESS\MSSQL\DATA\AsistorBD.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'AsistorBD_log', FILENAME = N'D:\Programas\MSSQL15.SQLEXPRESS\MSSQL\DATA\AsistorBD_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
-GO
-ALTER DATABASE [AsistorBD] SET COMPATIBILITY_LEVEL = 150
+    <value>USE[master]
+
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
@@ -749,4 +739,16 @@ GO
 ALTER DATABASE [AsistorBD] SET  READ_WRITE 
 GO</value>
   </data>
+  <metadata name="tmr1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tmr2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>106, 17</value>
+  </metadata>
+  <metadata name="tmr3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>195, 17</value>
+  </metadata>
+  <metadata name="tmrArrancar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>284, 17</value>
+  </metadata>
 </root>

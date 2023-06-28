@@ -34,12 +34,23 @@ namespace Asistencias.presentacion
             Console.WriteLine(indicador);
             if (indicador == "Correcto")
             {
-                DibujarUsuarios();
+                mostrarUsuarios();
+                if (contador == 0)
+                {
+                    Dispose();
+                    UsuarioPrincipal frm =new UsuarioPrincipal();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    DibujarUsuarios();
+                }
+                
             }
             else
             {
-                // Dispose();
-                MessageBox.Show("No se puede conectar");
+                Dispose();
+               // MessageBox.Show("No se puede conectar");
                 EleccionServidor frm = new EleccionServidor();
                 frm.ShowDialog();
             }
@@ -146,6 +157,13 @@ namespace Asistencias.presentacion
                 MenuPrincipal frm=new MenuPrincipal();
                 frm.ShowDialog();
             }
+        }
+        private void mostrarUsuarios()
+        {
+                DataTable dt=new DataTable();
+            DUsuario funcion= new DUsuario();
+            funcion.mostrarUsuarios(ref dt);
+            contador = dt.Rows.Count;
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)

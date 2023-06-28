@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalarBD));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnInstalador = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -44,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInstalacion = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
@@ -74,9 +75,13 @@
             this.lblBasededatos = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
+            this.tmr1 = new System.Windows.Forms.Timer(this.components);
+            this.tmr2 = new System.Windows.Forms.Timer(this.components);
+            this.tmr3 = new System.Windows.Forms.Timer(this.components);
+            this.tmrArrancar = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnInstalador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -120,17 +125,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "AsisTor";
             // 
-            // panel2
+            // pnInstalador
             // 
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(51, 194);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(553, 642);
-            this.panel2.TabIndex = 3;
+            this.pnInstalador.Controls.Add(this.pictureBox3);
+            this.pnInstalador.Controls.Add(this.panel4);
+            this.pnInstalador.Controls.Add(this.label2);
+            this.pnInstalador.Controls.Add(this.pictureBox2);
+            this.pnInstalador.Controls.Add(this.panel3);
+            this.pnInstalador.Location = new System.Drawing.Point(51, 194);
+            this.pnInstalador.Name = "pnInstalador";
+            this.pnInstalador.Size = new System.Drawing.Size(553, 642);
+            this.pnInstalador.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -239,27 +244,27 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnInstalacion);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(553, 82);
             this.panel3.TabIndex = 0;
             // 
-            // button1
+            // btnInstalacion
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(188)))), ((int)(((byte)(216)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(97, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(358, 63);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Instalar Servidor";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInstalacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
+            this.btnInstalacion.FlatAppearance.BorderSize = 0;
+            this.btnInstalacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(188)))), ((int)(((byte)(216)))));
+            this.btnInstalacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstalacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnInstalacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnInstalacion.Location = new System.Drawing.Point(97, 16);
+            this.btnInstalacion.Name = "btnInstalacion";
+            this.btnInstalacion.Size = new System.Drawing.Size(358, 63);
+            this.btnInstalacion.TabIndex = 0;
+            this.btnInstalacion.Text = "Instalar Servidor";
+            this.btnInstalacion.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -598,6 +603,22 @@
             this.Label8.TabIndex = 618;
             this.Label8.Text = "Nombre de Instancia:";
             // 
+            // tmr1
+            // 
+            this.tmr1.Interval = 10;
+            // 
+            // tmr2
+            // 
+            this.tmr2.Interval = 10;
+            // 
+            // tmr3
+            // 
+            this.tmr3.Interval = 10;
+            // 
+            // tmrArrancar
+            // 
+            this.tmrArrancar.Interval = 10;
+            // 
             // InstalarBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -605,13 +626,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1689, 927);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnInstalador);
             this.Controls.Add(this.panel1);
             this.Name = "InstalarBD";
             this.Text = "InstalarBD";
+            this.Load += new System.EventHandler(this.InstalarBD_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnInstalador.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -634,10 +656,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnInstalador;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInstalacion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
@@ -676,5 +698,9 @@
         internal System.Windows.Forms.Label lblBasededatos;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label8;
+        private System.Windows.Forms.Timer tmr1;
+        private System.Windows.Forms.Timer tmr2;
+        private System.Windows.Forms.Timer tmr3;
+        private System.Windows.Forms.Timer tmrArrancar;
     }
 }
