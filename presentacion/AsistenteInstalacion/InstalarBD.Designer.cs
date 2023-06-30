@@ -37,9 +37,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblSegundos = new System.Windows.Forms.Label();
+            this.lblMilisegundos = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblMinutos = new System.Windows.Forms.Label();
+            this.lblSegundos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@
             this.tmr2 = new System.Windows.Forms.Timer(this.components);
             this.tmr3 = new System.Windows.Forms.Timer(this.components);
             this.tmrArrancar = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnInstalador.SuspendLayout();
@@ -92,6 +93,7 @@
             this.Panel10.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,7 +110,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Asistencias.Properties.Resources.MiLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(243, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,15 +123,15 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(12, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 62);
+            this.label1.Size = new System.Drawing.Size(225, 62);
             this.label1.TabIndex = 0;
             this.label1.Text = "AsisTor";
             // 
             // pnInstalador
             // 
+            this.pnInstalador.Controls.Add(this.panel2);
             this.pnInstalador.Controls.Add(this.pictureBox3);
             this.pnInstalador.Controls.Add(this.panel4);
-            this.pnInstalador.Controls.Add(this.label2);
             this.pnInstalador.Controls.Add(this.pictureBox2);
             this.pnInstalador.Controls.Add(this.panel3);
             this.pnInstalador.Location = new System.Drawing.Point(51, 194);
@@ -158,25 +160,25 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.lblSegundos);
+            this.panel5.Controls.Add(this.lblMilisegundos);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.lblMinutos);
+            this.panel5.Controls.Add(this.lblSegundos);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(280, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(264, 58);
             this.panel5.TabIndex = 1;
             // 
-            // lblSegundos
+            // lblMilisegundos
             // 
-            this.lblSegundos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSegundos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSegundos.Location = new System.Drawing.Point(159, 25);
-            this.lblSegundos.Name = "lblSegundos";
-            this.lblSegundos.Size = new System.Drawing.Size(44, 33);
-            this.lblSegundos.TabIndex = 4;
-            this.lblSegundos.Text = "00";
-            this.lblSegundos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMilisegundos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblMilisegundos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMilisegundos.Location = new System.Drawing.Point(159, 25);
+            this.lblMilisegundos.Name = "lblMilisegundos";
+            this.lblMilisegundos.Size = new System.Drawing.Size(44, 33);
+            this.lblMilisegundos.TabIndex = 4;
+            this.lblMilisegundos.Text = "00";
+            this.lblMilisegundos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -188,16 +190,16 @@
             this.label5.Text = "seg";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblMinutos
+            // lblSegundos
             // 
-            this.lblMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblMinutos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMinutos.Location = new System.Drawing.Point(99, 25);
-            this.lblMinutos.Name = "lblMinutos";
-            this.lblMinutos.Size = new System.Drawing.Size(44, 33);
-            this.lblMinutos.TabIndex = 2;
-            this.lblMinutos.Text = "00";
-            this.lblMinutos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSegundos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSegundos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSegundos.Location = new System.Drawing.Point(99, 25);
+            this.lblSegundos.Name = "lblSegundos";
+            this.lblSegundos.Size = new System.Drawing.Size(44, 33);
+            this.lblSegundos.TabIndex = 2;
+            this.lblSegundos.Text = "00";
+            this.lblSegundos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -222,11 +224,12 @@
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 163);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(550, 152);
+            this.label2.Size = new System.Drawing.Size(544, 162);
             this.label2.TabIndex = 2;
             this.label2.Text = "Instalando Servidor.....\r\n\r\nNo cierre esta ventana,esta se cerrara\r\nautomaticamen" +
     "te cuando todo este \r\nlisto.";
@@ -265,6 +268,7 @@
             this.btnInstalacion.TabIndex = 0;
             this.btnInstalacion.Text = "Instalar Servidor";
             this.btnInstalacion.UseVisualStyleBackColor = false;
+            this.btnInstalacion.Click += new System.EventHandler(this.btnInstalacion_Click);
             // 
             // panel8
             // 
@@ -386,8 +390,8 @@
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(413, 166);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "alter database AsistorBD set single_user with rollback immediate \nDROP DATABASE A" +
-    "sistorBD";
+            this.txtEliminarBase.Text = "alter database AsistorBD \nset single_user with rollback immediate;\nDROP DATABASE " +
+    "AsistorBD;";
             // 
             // lblRutaInstancia
             // 
@@ -519,7 +523,7 @@
             this.txtnombre_scrypt.Name = "txtnombre_scrypt";
             this.txtnombre_scrypt.Size = new System.Drawing.Size(176, 22);
             this.txtnombre_scrypt.TabIndex = 621;
-            this.txtnombre_scrypt.Text = "ScriptORUS";
+            this.txtnombre_scrypt.Text = "ScriptAsisTor";
             // 
             // TXTbasededatos
             // 
@@ -528,7 +532,7 @@
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(177, 22);
             this.TXTbasededatos.TabIndex = 621;
-            this.TXTbasededatos.Text = "AsistorBD";
+            this.TXTbasededatos.Text = "Asistencias";
             // 
             // lblcontraseña
             // 
@@ -537,6 +541,7 @@
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(177, 22);
             this.lblcontraseña.TabIndex = 621;
+            this.lblcontraseña.Text = "13395";
             // 
             // lblnombredeservicio
             // 
@@ -614,10 +619,19 @@
             // tmr3
             // 
             this.tmr3.Interval = 10;
+            this.tmr3.Tick += new System.EventHandler(this.tmr3_Tick);
             // 
             // tmrArrancar
             // 
             this.tmrArrancar.Interval = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(3, 166);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(544, 162);
+            this.panel2.TabIndex = 5;
             // 
             // InstalarBD
             // 
@@ -647,6 +661,7 @@
             this.Panel10.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -663,9 +678,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblSegundos;
+        private System.Windows.Forms.Label lblMilisegundos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblMinutos;
+        private System.Windows.Forms.Label lblSegundos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -702,5 +717,6 @@
         private System.Windows.Forms.Timer tmr2;
         private System.Windows.Forms.Timer tmr3;
         private System.Windows.Forms.Timer tmrArrancar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
