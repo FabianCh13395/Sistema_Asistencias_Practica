@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Asistencias.logica;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -30,5 +31,28 @@ namespace Asistencias.datos
 				CONEXIONMAESTRA.cerrar();
 			}
         }
+
+		public bool insertarModulos(LModulo parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("insertar_modulos", CONEXIONMAESTRA.conexionDB);
+				cmd.CommandType= CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Modulo", parametros.modulo);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+				return true;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
     }
 }

@@ -117,6 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
+    <value>CREATE LOGIN raptor WITH PASSWORD = '13395'
+GO
+Use AsistorBD ;
+GO
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'raptor')
+BEGIN
+    CREATE USER [raptor] FOR LOGIN [raptor]
+    EXEC sp_addrolemember N'db_owner', N'raptor'
+    EXEC master..sp_addsrvrolemember @loginame = N'raptor', @rolename = N'sysadmin'
+END;
+GO</value>
+  </data>
   <data name="txtArgumentosini.Text" xml:space="preserve">
     <value>;SQL Server 2014 Configuration File
 [OPTIONS]
@@ -263,19 +276,6 @@ NPENABLED="0"
 ; Tipo de inicio para el servicio SQL Server Browser. 
 
 BROWSERSVCSTARTUPTYPE="Disabled"</value>
-  </data>
-  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
-    <value>CREATE LOGIN raptor WITH PASSWORD = '13395'
-GO
-Use AsistorBD ;
-GO
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'raptor')
-BEGIN
-    CREATE USER [raptor] FOR LOGIN [raptor]
-    EXEC sp_addrolemember N'db_owner', N'raptor'
-    EXEC master..sp_addsrvrolemember @loginame = N'raptor', @rolename = N'sysadmin'
-END;
-GO</value>
   </data>
   <data name="txtCrear_procedimientos.Text" xml:space="preserve">
     <value>USE[master]

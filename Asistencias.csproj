@@ -133,6 +133,9 @@
     <EmbeddedResource Include="presentacion\AsistenteInstalacion\InstalarBD.resx">
       <DependentUpon>InstalarBD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\AsistenteInstalacion\UsuarioPrincipal.resx">
+      <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
     </EmbeddedResource>

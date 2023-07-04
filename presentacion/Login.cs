@@ -50,7 +50,7 @@ namespace Asistencias.presentacion
             else
             {
                 Dispose();
-               // MessageBox.Show("No se puede conectar");
+                MessageBox.Show("No se puede conectar");
                 EleccionServidor frm = new EleccionServidor();
                 frm.ShowDialog();
             }

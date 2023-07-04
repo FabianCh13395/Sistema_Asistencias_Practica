@@ -87,15 +87,16 @@ namespace Asistencias.datos
 			try
 			{
 				int IdUser;
-				
 				CONEXIONMAESTRA.abrir();
 				SqlCommand da = new SqlCommand("Select idUsuario from Usuario", CONEXIONMAESTRA.conexionDB);
 				IdUser = Convert.ToInt32(da.ExecuteScalar());
 				CONEXIONMAESTRA.cerrar();
 				indicador = "Correcto";
 			}
-			catch (Exception )
+			catch (Exception ex)
 			{
+				Console.WriteLine(ex.StackTrace);
+				MessageBox.Show(ex.StackTrace);
 				indicador = "Incorrecto";
 			}
 		}

@@ -54,7 +54,7 @@ namespace Asistencias.presentacion.AsistenteInstalacion
         }
         private void comprobar_si_hay_servidor_SQLEXPRESS()
         {
-            txtservidor.Text = @".\"+lblnombredeservicio.Text;
+            txtservidor.Text =@".\"+lblnombredeservicio.Text;
             eliminarBaseDatos();
             ejecutar_scrypt_CrearBase();
         }
