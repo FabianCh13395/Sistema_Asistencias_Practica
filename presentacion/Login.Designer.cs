@@ -54,17 +54,20 @@
             this.pnUsuario = new System.Windows.Forms.Panel();
             this.flowLayoutPanelUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnIngresoContrasenia.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.Icono);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -432,6 +435,15 @@
             this.label3.Text = "Quien esta iniciando \r\nsesión?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(671, 36);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(89, 78);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 3;
+            this.Icono.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -453,6 +465,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnUsuario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +498,6 @@
         private System.Windows.Forms.Panel pnUsuario;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUsuarios;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox Icono;
     }
 }

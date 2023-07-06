@@ -109,7 +109,7 @@ namespace Asistencias.presentacion
 
                     flowLayoutPanelUsuarios.Controls.Add(p);
 
-                    b.Click += mieventoLabel;
+                    //b.Click += mieventoLabel;
                     im.Click += miEventoImagen;
 
 
@@ -125,14 +125,15 @@ namespace Asistencias.presentacion
         private void miEventoImagen(object sender, EventArgs e)
         {
             usuario = ((PictureBox)sender).Tag.ToString();
+            Icono.Image = ((PictureBox)sender).Image;
             MostrarPanelPassword();
         }
 
-        private void mieventoLabel(object sender, EventArgs e)
-        {
-            usuario = ((Label)sender).Text;
-            MostrarPanelPassword();
-        }
+        //private void mieventoLabel(object sender, EventArgs e)
+        //{
+        //    usuario = ((Label)sender).Text;
+        //    MostrarPanelPassword();
+        //}
         private void MostrarPanelPassword()
         {
             pnIngresoContrasenia.Visible = true;
@@ -155,6 +156,9 @@ namespace Asistencias.presentacion
             {
                 Dispose();
                 MenuPrincipal frm=new MenuPrincipal();
+                frm.idUsuario= idUsuario;
+                frm.loginV = usuario;
+                frm.pcIcono.Image = Icono.Image;
                 frm.ShowDialog();
             }
         }

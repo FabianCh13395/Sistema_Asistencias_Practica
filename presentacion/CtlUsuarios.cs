@@ -20,6 +20,8 @@ namespace Asistencias.presentacion
             InitializeComponent();
         }
         int IdUsuario;
+        string login;
+        string estado;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -215,7 +217,10 @@ namespace Asistencias.presentacion
             pnIconos.Dock = DockStyle.Fill;
             pnIconos.BringToFront();
         }
-
+        private void obtenerEstado()
+        {
+            estado = dtRegistroPersonal.SelectedCells[7].ToString();
+        }
         private void CtlUsuarios_Load(object sender, EventArgs e)
         {
             mostrarUsuarios();
@@ -244,6 +249,128 @@ namespace Asistencias.presentacion
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             pnIconos.Visible = false;
+        }
+
+        private void dtRegistroPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dtRegistroPersonal.Columns["Editar"].Index)
+            {
+                obtenerEstado();
+                if (estado == "ELIMINADO")
+                {
+                    DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        restaurarUsuario();
+                    }
+                }
+                else
+                {
+                    obtenerDatos();
+                }
+
+            }
+        }
+        private void capturarIdUsuario()
+        {
+            IdUsuario = Convert.ToInt32(dtRegistroPersonal.SelectedCells[2].Value);
+            login = dtRegistroPersonal.SelectedCells[4].Value.ToString();
+        }
+        private void restaurarUsuario()
+        {
+            capturarIdUsuario();
+            LUsuario parametros = new LUsuario();
+            DUsuario funcion = new DUsuario();
+            parametros.idUsuario = IdUsuario;
+            if (funcion.restaurar_Usuario(parametros) == true)
+            {
+                mostrarUsuarios();
+            }
+        }
+        private void obtenerDatos()
+        {
+            capturarIdUsuario();
+            txtNombre.Text = dtRegistroPersonal.SelectedCells[3].Value.ToString();
+            txtUsuario.Text = dtRegistroPersonal.SelectedCells[4].Value.ToString();
+            txtPassword.Text = dtRegistroPersonal.SelectedCells[5].Value.ToString();
+
+            pbIcono.BackgroundImage = null;
+            byte[] b = (byte[])(dtRegistroPersonal.SelectedCells[6].Value);
+            MemoryStream ms = new MemoryStream(b);
+            pbIcono.Image = Image.FromStream(ms);
+            pbIcono.Visible = true;
+            pnRegistro.Visible = true;
+            pnRegistro.Dock = DockStyle.Fill;
+            lbAvisoIcono.Visible = false;
+            btnEditar.Visible = true;
+            btnGuardar.Visible = false;
+            MostrarModulos();
+            mostrarPermisos();
+           
+        }
+        private void mostrarPermisos()
+        {
+            DataTable dt = new DataTable();
+            DPermiso funcion = new DPermiso();
+            LPermiso parametros = new LPermiso();
+            parametros.idUsuario = IdUsuario;
+            funcion.mostrarPermisos(ref dt, parametros);
+            foreach (DataRow rowPermisos in dt.Rows)
+            {
+                int idmoduloPermisos = Convert.ToInt32(rowPermisos["id_Modulo"]);
+                foreach (DataGridViewRow rowModulos in dtModulos.Rows)
+                {
+                    int Idmodulo = Convert.ToInt32(rowModulos.Cells["idModulo"].Value);
+                    if (idmoduloPermisos == Idmodulo)
+                    {
+                        rowModulos.Cells[0].Value = true;
+                    }
+                }
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtUsuario.Text) && !string.IsNullOrEmpty(txtPassword.Text))
+            {
+                if (lbAvisoIcono.Visible == false)
+                {
+                    editarUsuarios();
+
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un icono");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe rellenar todos los campos.");
+            }
+        }
+        private void editarUsuarios()
+        {
+            LUsuario parametros = new LUsuario();
+            DUsuario funcion = new DUsuario();
+            parametros.idUsuario = IdUsuario;
+            parametros.nombres = txtNombre.Text;
+            parametros.login = txtUsuario.Text;
+            parametros.password = txtPassword.Text;
+            MemoryStream ms = new MemoryStream();
+            pbIcono.Image.Save(ms, pbIcono.Image.RawFormat);
+            parametros.icono = ms.GetBuffer();
+            if (funcion.editar_Usuarios(parametros) == true)
+            {
+                eliminarPermisos();
+                insertarPermisos();
+            }
+        }
+        private void eliminarPermisos()
+        {
+            LPermiso parametros = new LPermiso();
+            DPermiso funcion = new DPermiso();
+            parametros.idUsuario =  IdUsuario;
+            funcion.eliminarPermisos(parametros);
         }
     }
 }

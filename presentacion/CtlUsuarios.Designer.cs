@@ -165,6 +165,7 @@
             this.dtRegistroPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtRegistroPersonal.Size = new System.Drawing.Size(1183, 760);
             this.dtRegistroPersonal.TabIndex = 2;
+            this.dtRegistroPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRegistroPersonal_CellClick);
             // 
             // Eliminar
             // 
@@ -416,6 +417,7 @@
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Actualizar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRegresar
             // 

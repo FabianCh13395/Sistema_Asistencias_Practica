@@ -94,7 +94,7 @@ namespace Asistencias.presentacion.AsistenteInstalacion
         {
             LModulo parametros=new LModulo();
             DModulo funcion=new DModulo();
-            var Modulos = new List<string> { "Usuarios", "Personal", "PrePlanillas" };
+            var Modulos = new List<string> { "Usuarios", "Personal", "PrePlanillas","Respaldos" };
             foreach(var modulo in Modulos)
             {
                 parametros.modulo = modulo;

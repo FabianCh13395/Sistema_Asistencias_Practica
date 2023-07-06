@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Asistencias.datos;
+using Asistencias.logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +18,47 @@ namespace Asistencias.presentacion
         {
             InitializeComponent();
         }
+        public int idUsuario;
+        public string loginV;
+
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             panelBienvenida.Dock = DockStyle.Fill;
+            validarPermisos();
+        }
+        private void validarPermisos()
+        {
+            DataTable dt=new DataTable();
+            DPermiso funcion=new DPermiso();
+            LPermiso parametros = new LPermiso();
+            parametros.idUsuario= idUsuario;
+            funcion.mostrarPermisos(ref dt,parametros);
+            btnConsultas.Enabled = false;
+            btnPersonal.Enabled = false;
+            btnRegistro.Enabled = false;
+            btnUsuarios.Enabled = false;
+            btnRestaurar.Enabled = false;
+            btnRespaldos.Enabled = false;
+            foreach(DataRow rowPermiso in dt.Rows)
+            {
+                string modulo = Convert.ToString(rowPermiso["modulo"]);
+                if (modulo == "PrePlanillas")
+                {
+                    btnConsultas.Enabled= true;
+                }else if(modulo == "Usuarios")
+                {
+                    btnUsuarios.Enabled= true;
+                    btnRegistro.Enabled= true;
+                }else if (modulo == "Personal")
+                {
+                    btnPersonal.Enabled= true;
+                }else if((modulo == "Respaldos"))
+                {
+                    btnRespaldos.Enabled= true;
+                    btnRestaurar.Enabled= true;
+                }
+            }
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)

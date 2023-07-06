@@ -9,6 +9,7 @@ using Asistencias.logica;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Drawing;
+using Asistencias.presentacion;
 
 namespace Asistencias.datos
 {
@@ -120,7 +121,56 @@ namespace Asistencias.datos
 			finally
 			{
 				CONEXIONMAESTRA.cerrar();
-			}
+            }
 		}
+        public bool editar_Usuarios(LUsuario parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("editar_Usuarios", CONEXIONMAESTRA.conexionDB);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdUsuario", parametros.idUsuario);
+                cmd.Parameters.AddWithValue("@NombresApellidos", parametros.nombres);
+                cmd.Parameters.AddWithValue("@Login", parametros.login);
+                cmd.Parameters.AddWithValue("@Password", parametros.password);
+                cmd.Parameters.AddWithValue("@Icono", parametros.icono);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+
+        }
+        public bool restaurar_Usuario(LUsuario parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("restaurar_usuario", CONEXIONMAESTRA.conexionDB);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdUsuario", parametros.idUsuario);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+
+        }
     }
 }
