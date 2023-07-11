@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Proyectos C#\Asistencias\Asistencias.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="D:\Proyectos C#\Asistencias\App.config" />
+  <event action="Analyze" type="Success" name="Asistencias.resx" path="D:\Proyectos C#\Asistencias\presentacion\Asistencias.resx" />
+  <event action="Analyze" type="Success" name="ConexionRemota.resx" path="D:\Proyectos C#\Asistencias\presentacion\AsistenteInstalacion\ConexionRemota.resx" />
+  <event action="Analyze" type="Success" name="EleccionServidor.resx" path="D:\Proyectos C#\Asistencias\presentacion\AsistenteInstalacion\EleccionServidor.resx" />
+  <event action="Analyze" type="Success" name="InstalarBD.resx" path="D:\Proyectos C#\Asistencias\presentacion\AsistenteInstalacion\InstalarBD.resx" />
+  <event action="Analyze" type="Success" name="UsuarioPrincipal.resx" path="D:\Proyectos C#\Asistencias\presentacion\AsistenteInstalacion\UsuarioPrincipal.resx" />
+  <event action="Analyze" type="Success" name="CtlUsuarios.resx" path="D:\Proyectos C#\Asistencias\presentacion\CtlUsuarios.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="D:\Proyectos C#\Asistencias\presentacion\Login.resx" />
+  <event action="Analyze" type="Success" name="MenuPrincipal.resx" path="D:\Proyectos C#\Asistencias\presentacion\MenuPrincipal.resx" />
+  <event action="Analyze" type="Success" name="Personal.resx" path="D:\Proyectos C#\Asistencias\presentacion\Personal.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\Proyectos C#\Asistencias\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Asistencias" path="D:\Proyectos C#\Asistencias\Asistencias.csproj" />
+  <event action="Analyze" type="Success" name="Asistencias" path="D:\Proyectos C#\Asistencias\Asistencias.sln" />
+</log>

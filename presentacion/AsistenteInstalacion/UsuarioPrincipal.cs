@@ -81,14 +81,13 @@ namespace Asistencias.presentacion.AsistenteInstalacion
                 DPermiso funcion=new DPermiso();
                 parametros.idModulo=idModulo;
                 parametros.idUsuario = IdUsuario;
-                if (funcion.insertarPermisos(parametros) == true)
-                {
-                    MessageBox.Show("Recuerda que para iniciar sesion tu usuario es: " + txtUsuario.Text+"\n Contraseña: "+txtContrasenia.Text,"AsisTor",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    Dispose();
-                    Login frm=new Login();
-                    frm.ShowDialog();
-                }
+                funcion.insertarPermisos(parametros);
+                
             }
+            MessageBox.Show("Recuerda que para iniciar sesion tu usuario es: " + txtUsuario.Text + "\n Contraseña: " + txtContrasenia.Text, "AsisTor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
         }
         private void insertarModulos()
         {
@@ -100,6 +99,11 @@ namespace Asistencias.presentacion.AsistenteInstalacion
                 parametros.modulo = modulo;
                 funcion.insertarModulos(parametros);
             }
+        }
+
+        private void UsuarioPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

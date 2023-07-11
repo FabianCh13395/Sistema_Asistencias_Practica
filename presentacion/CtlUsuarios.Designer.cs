@@ -139,6 +139,9 @@
             this.txtBuscador.Size = new System.Drawing.Size(410, 34);
             this.txtBuscador.TabIndex = 0;
             this.txtBuscador.Text = "Ingrese un nombre.....";
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
+            this.txtBuscador.MouseEnter += new System.EventHandler(this.txtBuscador_MouseEnter);
+            this.txtBuscador.MouseLeave += new System.EventHandler(this.txtBuscador_MouseLeave);
             // 
             // dtRegistroPersonal
             // 
@@ -166,6 +169,7 @@
             this.dtRegistroPersonal.Size = new System.Drawing.Size(1183, 760);
             this.dtRegistroPersonal.TabIndex = 2;
             this.dtRegistroPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRegistroPersonal_CellClick);
+            this.dtRegistroPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRegistroPersonal_CellContentClick);
             // 
             // Eliminar
             // 
@@ -189,6 +193,7 @@
             // 
             // pnRegistro
             // 
+            this.pnRegistro.BackColor = System.Drawing.SystemColors.GrayText;
             this.pnRegistro.Controls.Add(this.pnIconos);
             this.pnRegistro.Controls.Add(this.lbAvisoIcono);
             this.pnRegistro.Controls.Add(this.pbIcono);
@@ -488,6 +493,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label4.Location = new System.Drawing.Point(56, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 25);
@@ -514,6 +520,8 @@
             this.txtPassword.Size = new System.Drawing.Size(197, 33);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
             // 
             // txtUsuario
             // 
@@ -535,6 +543,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label3.Location = new System.Drawing.Point(56, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 25);
@@ -545,6 +554,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(18, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 25);
@@ -555,6 +565,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(56, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 25);

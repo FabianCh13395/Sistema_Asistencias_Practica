@@ -237,6 +237,7 @@
             this.Name = "UsuarioPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuarioPrincipal";
+            this.Load += new System.EventHandler(this.UsuarioPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

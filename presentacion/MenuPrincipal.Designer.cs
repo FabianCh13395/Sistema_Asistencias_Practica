@@ -32,49 +32,49 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.btnEstaciones = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btnRespaldos = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnRegistro = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblIngresado = new System.Windows.Forms.Label();
-            this.pcIcono = new System.Windows.Forms.PictureBox();
             this.pnlPadre = new System.Windows.Forms.Panel();
             this.panelBienvenida = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEstaciones = new System.Windows.Forms.Button();
+            this.btnRespaldos = new System.Windows.Forms.Button();
+            this.btnRestaurar = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnRegistro = new System.Windows.Forms.Button();
+            this.pcIcono = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcIcono)).BeginInit();
             this.pnlPadre.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,17 +128,6 @@
             this.label1.Text = "AsisTor";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::Asistencias.Properties.Resources.MiLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel21
             // 
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
@@ -157,22 +146,6 @@
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(168, 82);
             this.panel18.TabIndex = 5;
-            // 
-            // btnEstaciones
-            // 
-            this.btnEstaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnEstaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEstaciones.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnEstaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEstaciones.Image = global::Asistencias.Properties.Resources.lan;
-            this.btnEstaciones.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEstaciones.Location = new System.Drawing.Point(11, 10);
-            this.btnEstaciones.Name = "btnEstaciones";
-            this.btnEstaciones.Size = new System.Drawing.Size(157, 72);
-            this.btnEstaciones.TabIndex = 2;
-            this.btnEstaciones.Text = "Estaciones";
-            this.btnEstaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEstaciones.UseVisualStyleBackColor = false;
             // 
             // panel19
             // 
@@ -201,22 +174,6 @@
             this.panel14.Size = new System.Drawing.Size(168, 82);
             this.panel14.TabIndex = 3;
             // 
-            // btnRespaldos
-            // 
-            this.btnRespaldos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnRespaldos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRespaldos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnRespaldos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRespaldos.Image = global::Asistencias.Properties.Resources.copia_de_respaldo;
-            this.btnRespaldos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRespaldos.Location = new System.Drawing.Point(11, 10);
-            this.btnRespaldos.Name = "btnRespaldos";
-            this.btnRespaldos.Size = new System.Drawing.Size(157, 72);
-            this.btnRespaldos.TabIndex = 2;
-            this.btnRespaldos.Text = "Respaldos";
-            this.btnRespaldos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRespaldos.UseVisualStyleBackColor = false;
-            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -243,22 +200,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(168, 82);
             this.panel11.TabIndex = 2;
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnRestaurar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRestaurar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnRestaurar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRestaurar.Image = global::Asistencias.Properties.Resources.base_de_datos;
-            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRestaurar.Location = new System.Drawing.Point(11, 10);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(157, 72);
-            this.btnRestaurar.TabIndex = 2;
-            this.btnRestaurar.Text = "Restaurar BD";
-            this.btnRestaurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRestaurar.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
@@ -287,23 +228,6 @@
             this.panel8.Size = new System.Drawing.Size(168, 82);
             this.panel8.TabIndex = 1;
             // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUsuarios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUsuarios.Image = global::Asistencias.Properties.Resources.user_interface;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsuarios.Location = new System.Drawing.Point(11, 10);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(157, 72);
-            this.btnUsuarios.TabIndex = 2;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -330,22 +254,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(168, 77);
             this.panel5.TabIndex = 0;
-            // 
-            // btnRegistro
-            // 
-            this.btnRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRegistro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.btnRegistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRegistro.Image = global::Asistencias.Properties.Resources.reloj;
-            this.btnRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegistro.Location = new System.Drawing.Point(11, 10);
-            this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(157, 67);
-            this.btnRegistro.TabIndex = 2;
-            this.btnRegistro.Text = "Registro";
-            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRegistro.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -389,6 +297,7 @@
             this.btnConsultas.TabIndex = 0;
             this.btnConsultas.Text = "Pre planilla";
             this.btnConsultas.UseVisualStyleBackColor = false;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // panel3
             // 
@@ -411,16 +320,6 @@
             this.lblIngresado.TabIndex = 1;
             this.lblIngresado.Text = "Jose Contreras\r\n";
             this.lblIngresado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pcIcono
-            // 
-            this.pcIcono.Image = global::Asistencias.Properties.Resources.clave;
-            this.pcIcono.Location = new System.Drawing.Point(0, 12);
-            this.pcIcono.Name = "pcIcono";
-            this.pcIcono.Size = new System.Drawing.Size(70, 68);
-            this.pcIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcIcono.TabIndex = 0;
-            this.pcIcono.TabStop = false;
             // 
             // pnlPadre
             // 
@@ -452,6 +351,108 @@
             this.label2.Text = "Bienvenido a Asistor";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::Asistencias.Properties.Resources.MiLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEstaciones
+            // 
+            this.btnEstaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnEstaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEstaciones.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnEstaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEstaciones.Image = global::Asistencias.Properties.Resources.lan;
+            this.btnEstaciones.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEstaciones.Location = new System.Drawing.Point(11, 10);
+            this.btnEstaciones.Name = "btnEstaciones";
+            this.btnEstaciones.Size = new System.Drawing.Size(157, 72);
+            this.btnEstaciones.TabIndex = 2;
+            this.btnEstaciones.Text = "Estaciones";
+            this.btnEstaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEstaciones.UseVisualStyleBackColor = false;
+            // 
+            // btnRespaldos
+            // 
+            this.btnRespaldos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRespaldos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRespaldos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnRespaldos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRespaldos.Image = global::Asistencias.Properties.Resources.copia_de_respaldo;
+            this.btnRespaldos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRespaldos.Location = new System.Drawing.Point(11, 10);
+            this.btnRespaldos.Name = "btnRespaldos";
+            this.btnRespaldos.Size = new System.Drawing.Size(157, 72);
+            this.btnRespaldos.TabIndex = 2;
+            this.btnRespaldos.Text = "Respaldos";
+            this.btnRespaldos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRespaldos.UseVisualStyleBackColor = false;
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRestaurar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRestaurar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnRestaurar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRestaurar.Image = global::Asistencias.Properties.Resources.base_de_datos;
+            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRestaurar.Location = new System.Drawing.Point(11, 10);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(157, 72);
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.Text = "Restaurar BD";
+            this.btnRestaurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRestaurar.UseVisualStyleBackColor = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUsuarios.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUsuarios.Image = global::Asistencias.Properties.Resources.user_interface;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUsuarios.Location = new System.Drawing.Point(11, 10);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(157, 72);
+            this.btnUsuarios.TabIndex = 2;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnRegistro
+            // 
+            this.btnRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegistro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnRegistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRegistro.Image = global::Asistencias.Properties.Resources.reloj;
+            this.btnRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRegistro.Location = new System.Drawing.Point(11, 10);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(157, 67);
+            this.btnRegistro.TabIndex = 2;
+            this.btnRegistro.Text = "Registro";
+            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRegistro.UseVisualStyleBackColor = false;
+            // 
+            // pcIcono
+            // 
+            this.pcIcono.Image = global::Asistencias.Properties.Resources.clave;
+            this.pcIcono.Location = new System.Drawing.Point(0, 12);
+            this.pcIcono.Name = "pcIcono";
+            this.pcIcono.Size = new System.Drawing.Size(70, 68);
+            this.pcIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcIcono.TabIndex = 0;
+            this.pcIcono.TabStop = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -467,16 +468,16 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcIcono)).EndInit();
             this.pnlPadre.ResumeLayout(false);
             this.panelBienvenida.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcIcono)).EndInit();
             this.ResumeLayout(false);
 
         }

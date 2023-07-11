@@ -33,6 +33,7 @@ namespace Asistencias.presentacion
             txtNombre.Clear();
             txtUsuario.Clear();
             txtPassword.Clear();
+            txtUsuario.Enabled = true;
         }
         private void HabilitarPanales()
         {
@@ -219,7 +220,7 @@ namespace Asistencias.presentacion
         }
         private void obtenerEstado()
         {
-            estado = dtRegistroPersonal.SelectedCells[7].ToString();
+            estado = dtRegistroPersonal.SelectedCells[7].Value.ToString();
         }
         private void CtlUsuarios_Load(object sender, EventArgs e)
         {
@@ -258,6 +259,7 @@ namespace Asistencias.presentacion
                 obtenerEstado();
                 if (estado == "ELIMINADO")
                 {
+                    
                     DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (resultado == DialogResult.OK)
                     {
@@ -269,6 +271,34 @@ namespace Asistencias.presentacion
                     obtenerDatos();
                 }
 
+            } else if (e.ColumnIndex == dtRegistroPersonal.Columns["Eliminar"].Index )
+            {
+                obtenerEstado();
+                if (estado == "ELIMINADO")
+                {
+                    MessageBox.Show("Este Usuario ya esta eliminado ", "Error", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    DialogResult resultado = MessageBox.Show(" ¿Desea Eliminar a este Usuario?", "Eliminar Usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        capturarIdUsuario();
+                        eliminarUsuario();
+                    }
+                }
+               
+            }
+        }
+        private void eliminarUsuario()
+        {
+            LUsuario parametros = new LUsuario();
+            DUsuario funcion = new DUsuario();
+            parametros.idUsuario = IdUsuario;
+            parametros.login = login;
+            if (funcion.eliminarUsuarios(parametros) == true)
+            {
+                mostrarUsuarios();
             }
         }
         private void capturarIdUsuario()
@@ -292,6 +322,17 @@ namespace Asistencias.presentacion
             capturarIdUsuario();
             txtNombre.Text = dtRegistroPersonal.SelectedCells[3].Value.ToString();
             txtUsuario.Text = dtRegistroPersonal.SelectedCells[4].Value.ToString();
+            if(txtUsuario.Text=="admin" )
+            {
+                txtUsuario.Enabled = false;
+                dtModulos.Enabled = false;
+
+            }
+            else
+            {
+                txtUsuario.Enabled = true;
+                dtModulos.Enabled=true;
+            }
             txtPassword.Text = dtRegistroPersonal.SelectedCells[5].Value.ToString();
 
             pbIcono.BackgroundImage = null;
@@ -371,6 +412,53 @@ namespace Asistencias.presentacion
             DPermiso funcion = new DPermiso();
             parametros.idUsuario =  IdUsuario;
             funcion.eliminarPermisos(parametros);
+        }
+
+        private void txtBuscador_MouseEnter(object sender, EventArgs e)
+        {
+            if(txtBuscador.Text== "Ingrese un nombre.....")
+            {
+                txtBuscador.Clear();
+            }
+        }
+
+        private void txtBuscador_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtBuscador.Text == "")
+            {
+                txtBuscador.Text = "Ingrese un nombre.....";
+                txtBuscador.Font = new Font(txtBuscador.Font, FontStyle.Bold);
+                mostrarUsuarios();
+            }
+        }
+
+        private void txtPassword_MouseEnter(object sender, EventArgs e)
+        {
+            lbAviso.Visible = true;
+            lbAviso.ForeColor = Color.Red;
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            lbAviso.Visible = false;
+        }
+
+        private void dtRegistroPersonal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            BuscarUsuarios();
+        }
+        private void BuscarUsuarios()
+        {
+            DataTable dt = new DataTable();
+            DUsuario funcion = new DUsuario();
+            funcion.buscarUsuarios(ref dt, txtBuscador.Text);
+            dtRegistroPersonal.DataSource = dt;
+            diseniarDtGridViewUsuarios();
         }
     }
 }

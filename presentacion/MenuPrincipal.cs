@@ -76,5 +76,13 @@ namespace Asistencias.presentacion
             usuario.Dock = DockStyle.Fill;
             pnlPadre.Controls.Add(usuario);
         }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            pnlPadre.Controls.Clear();
+            PrePlanilla control=new PrePlanilla();
+            control.Dock= DockStyle.Fill;
+            pnlPadre .Controls.Add(control);   
+        }
     }
 }
